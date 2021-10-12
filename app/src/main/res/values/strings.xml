@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Shipper</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="hintPassword">Password</string>
+    <string name="hintUsername">Username</string>
+    <string name="action_home">Home</string>
+    <string name="action_profile">Profile</string>
+    <string name="text_home">Trang Chủ</string>
+    <string name="text_profile">Hồ sơ</string>
 </resources>

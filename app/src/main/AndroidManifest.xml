@@ -5,18 +5,57 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Đăng nhập"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Shipper">
+        android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".MainActivity"
+            android:name=".Screen.Account"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.Edit"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenNeedDelivery"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenDelivering"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenDelivered"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenCanceled"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.Failure"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenKLLD"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenTDTT"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenKH"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.ScreenConfirm"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screen.DetailOrder"
+            android:exported="true" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
