@@ -4,15 +4,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.book.MainActivity;
 import com.example.book.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
     Button btnLogin;
+    EditText txtUsernameLogin;
+    EditText txtPasswordLogin;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,15 +32,38 @@ public class Login extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // khi bấm đăng nhập
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                String username = txtUsernameLogin.getText().toString();
+                String password = txtPasswordLogin.getText().toString();
+
+                if (username.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập tài khoản!", Toast.LENGTH_SHORT).show();
+                } else if (password.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập mật khẩu!", Toast.LENGTH_SHORT).show();
+                } else {
+                    FirebaseAuth auth = FirebaseAuth.getInstance();
+                    auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                MainActivity.usernameApp = auth.getUid();
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Sai tài khoản hoặc mật khẩu!", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
             }
         });
     }
 
     private void setControl() {
         btnLogin = findViewById(R.id.btnLogin);
+        txtPasswordLogin = findViewById(R.id.txtPasswordLogin);
+        txtUsernameLogin = findViewById(R.id.txtUsernameLogin);
     }
 }

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import com.example.book.Adapter.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     ViewPager2 viewPager2;
 
+    public  static String usernameApp;
+
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setControl();
         setEvent();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("Hello, World!");
+      //  FirebaseDatabase database = FirebaseDatabase.getInstance();
+       // DatabaseReference myRef = database.getReference("message");
+       // myRef.setValue("Hello, World!");
+
+
+
+
 
     }
 
