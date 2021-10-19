@@ -29,6 +29,7 @@ public class ScreenNeedDelivery extends AppCompatActivity {
     MyRecyclerViewAdapterNeedDelivery adapter;
     RecyclerView recyclerView;
     ArrayList<Bill> deliveryArrayList = new ArrayList<>();
+    ArrayList<String> mKey = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class ScreenNeedDelivery extends AppCompatActivity {
         setControl();
         Toolbar();
         setEvent();
+
+
     }
 
     private void setEvent() {
@@ -51,22 +54,51 @@ public class ScreenNeedDelivery extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setAdapter(adapter);
+
+    }
+
+    public void loc() {
+        for (int j = 0; j < deliveryArrayList.size(); j++) {
+            if (deliveryArrayList.get(j).getStatus() != 3) {
+                deliveryArrayList.remove(j);
+                //  mKey.remove(j);
+            }
+        }
+        adapter.notifyDataSetChanged();
     }
 
     private void getDataInDatabase() {
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
-        mDatabase.addChildEventListener(new ChildEventListener() {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("bills").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Bill bill = snapshot.getValue(Bill.class);
+                bill.setId(snapshot.getKey());
+                if (bill.getShipper().equals(MainActivity.usernameApp)) {
+                    if (bill.getStatus() == 3) {
+                        deliveryArrayList.add(bill);
+                        String key = snapshot.getKey();
+                        mKey.add(key);
+                    }
+                }
 
-                deliveryArrayList.add(bill);
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
+                // lấy địa chỉ id của đối tượng vừa bị thay đổi bên trong mảng mkey
+                String key = snapshot.getKey();
+                Bill bill = snapshot.getValue(Bill.class);
+                bill.setId(snapshot.getKey());
+
+                int index = mKey.indexOf(key);
+                if (index != -1) {
+                    mKey.remove(index);
+                    deliveryArrayList.remove(index);
+                }
+                loc();
             }
 
             @Override
@@ -81,7 +113,7 @@ public class ScreenNeedDelivery extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                System.out.println(error.toString());
+
             }
         });
     }

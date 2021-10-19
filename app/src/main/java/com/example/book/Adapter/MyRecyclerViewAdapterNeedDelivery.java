@@ -27,6 +27,7 @@ public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRe
         this.context = context;
         this.layoutID = layoutID;
         this.deliveryArrayList = deliveryArrayList;
+
     }
 
     @NonNull
@@ -45,16 +46,19 @@ public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRe
         holder.tvTNN.setText(delivery.getName());
         holder.tvMDH.setText(delivery.getId());
 
+        // bấm xác nhận để nhận đơn và đi giao
         holder.btnDaNhanHangCanGiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseConnect.setOrderReceivedBill(delivery);
+
             }
         });
+        // bấm hủy đơn hàng sẽ quay lại trạng thái đã đóng gói
         holder.btnHuyHangCanGiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             
+                FirebaseConnect.setOrderCancelBill(delivery);
             }
         });
 

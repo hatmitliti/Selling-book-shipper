@@ -1,17 +1,17 @@
 package com.example.book.Object;
 
 public class ProductInCart {
-    private  String name;
-    private  int price;
-    private  int qualyti;
+    private String name;
+    private int price;
+    private int quality;
 
     public ProductInCart() {
     }
 
-    public ProductInCart(String name, int price, int qualyti) {
+    public ProductInCart(String name, int price, int quality) {
         this.name = name;
         this.price = price;
-        this.qualyti = qualyti;
+        this.quality = quality;
     }
 
     public String getName() {
@@ -30,11 +30,11 @@ public class ProductInCart {
         this.price = price;
     }
 
-    public int getQualyti() {
-        return qualyti;
+    public int getQuality() {
+        return quality;
     }
 
-    public void setQualyti(int qualyti) {
-        this.qualyti = qualyti;
+    public void setQuality(int quality) {
+        this.quality = quality;
     }
 }

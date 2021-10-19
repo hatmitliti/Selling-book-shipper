@@ -17,17 +17,21 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
     Button btnLogin;
     EditText txtUsernameLogin;
     EditText txtPasswordLogin;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dang_nhap);
         setControl();
+
         setEvent();
     }
 
@@ -44,7 +48,7 @@ public class Login extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Vui lòng nhập mật khẩu!", Toast.LENGTH_SHORT).show();
                 } else {
-                    FirebaseAuth auth = FirebaseAuth.getInstance();
+                    auth = FirebaseAuth.getInstance();
                     auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -60,6 +64,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 
     private void setControl() {
         btnLogin = findViewById(R.id.btnLogin);

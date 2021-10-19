@@ -7,45 +7,73 @@
 
     android:orientation="vertical"
     tools:context=".Screen.Failure">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="Xác nhận lý do thất bại"
-        app:titleTextColor="@color/white"
         android:background="@color/black"
-        />
+        app:title="Xác nhận lý do thất bại"
+        app:titleTextColor="@color/white" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thất bại"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:layout_marginBottom="10dp"
-            />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
-            android:background="@drawable/border_listview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:text="Thất bại"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtMaDonHangXacNhanHuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="25252525"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txtLyDoHuyDon1XacNhanHuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="không liên lạc được"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txtLyDoHuyDon2XacNhanHuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="đúng địa chỉ, không có nguoi nhan"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom">
+
         <Button
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/background_button_completed"
-            android:text="Xác Nhận"
-            />
+            android:text="Xác Nhận" />
     </LinearLayout>
 </LinearLayout>
