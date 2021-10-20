@@ -22,7 +22,7 @@ public class ScreenCanceled extends AppCompatActivity {
     Toolbar toolbar;
     MyRecyclerViewAdapterCanceled adapter;
     RecyclerView recyclerView;
-    ArrayList<Canceled> canceledArrayList =new ArrayList<>();
+    ArrayList<Canceled> canceledArrayList =new ArrayList<>(); ArrayList<String> mKey = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

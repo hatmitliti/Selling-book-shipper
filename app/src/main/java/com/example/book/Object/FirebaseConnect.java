@@ -37,4 +37,9 @@ public class FirebaseConnect {
         mDatabase.child(idBill).child("status").setValue(10);
     }
 
+    public static void setDaGiaoTienDHCanGiao(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(6);
+    }
+
 }
