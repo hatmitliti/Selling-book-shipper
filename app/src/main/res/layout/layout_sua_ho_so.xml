@@ -33,11 +33,13 @@
         android:layout_weight="7"
         >
         <EditText
+            android:id="@+id/etHoTen"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="Họ và tên"
             />
         <EditText
+            android:id="@+id/etSDT"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="Số điện thoại"
