@@ -42,4 +42,9 @@ public class FirebaseConnect {
         mDatabase.child(idBill).child("status").setValue(6);
     }
 
+    public static void setDaTraHangDonHang(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(8);
+    }
+
 }

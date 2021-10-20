@@ -50,7 +50,7 @@ public class ScreenConfirm extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                onBackPressed();
             }
         });
     }
@@ -59,7 +59,8 @@ public class ScreenConfirm extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }

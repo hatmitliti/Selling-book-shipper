@@ -52,10 +52,11 @@
             android:orientation="vertical"
             android:gravity="center">
             <Button
+                android:id="@+id/btnDaTraHang"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_cancel"
-                android:text="Đã giao lại hàng"/>
+                android:text="Đã trả hàng"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
