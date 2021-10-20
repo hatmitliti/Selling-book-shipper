@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="5"
         android:gravity="center"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_profile"
-            android:textSize="30dp"
             android:textColor="@color/black"
-            />
+            android:textSize="30dp" />
+
         <ImageView
             android:layout_width="70dp"
             android:layout_height="100dp"
-            android:src="@drawable/img_profile"
-            />
+            android:src="@drawable/img_profile" />
+
         <TextView
+<<<<<<< HEAD
             android:id="@+id/tvName"
+=======
+            android:id="@+id/txtHoTenShipperInHoSo"
+>>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shipper A"
-            android:textSize="30dp"
             android:textColor="@color/black"
-            />
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,11 +42,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btnEdit"
                 android:layout_width="120dp"

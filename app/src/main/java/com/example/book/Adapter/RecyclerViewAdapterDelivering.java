@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.book.Object.Bill;
 import com.example.book.Object.Delivering;
 import com.example.book.R;
 
@@ -19,14 +20,14 @@ import java.util.ArrayList;
 public class RecyclerViewAdapterDelivering extends RecyclerView.Adapter<RecyclerViewAdapterDelivering.MyHolderViewDelivering> {
     private Activity context;
     private int layoutID;
-    private ArrayList<Delivering> deliveringArrayList;
+    private ArrayList<Bill> deliveringArrayList;
     private MyItemOnClick delegation;
 
     public void setDelegation(MyItemOnClick delegation) {
         this.delegation = delegation;
     }
 
-    public RecyclerViewAdapterDelivering(Activity context, int layoutID, ArrayList<Delivering> deliveringArrayList) {
+    public RecyclerViewAdapterDelivering(Activity context, int layoutID, ArrayList<Bill> deliveringArrayList) {
         this.context = context;
         this.layoutID = layoutID;
         this.deliveringArrayList = deliveringArrayList;
@@ -42,11 +43,11 @@ public class RecyclerViewAdapterDelivering extends RecyclerView.Adapter<Recycler
 
     @Override
     public void onBindViewHolder(@NonNull MyHolderViewDelivering holder, int position) {
-        Delivering delivering = deliveringArrayList.get(position);
-        holder.tvTT.setText(delivering.getTrangThai());
-        holder.tvDC.setText(delivering.getDiaChi());
-        holder.tvTNN.setText(delivering.getTenNgNhan());
-        holder.tvMDH.setText(delivering.getMaDH());
+        Bill delivering = deliveringArrayList.get(position);
+        holder.tvTT.setText("Đang giao");
+        holder.tvDC.setText(delivering.getAddress());
+        holder.tvTNN.setText(delivering.getName());
+        holder.tvMDH.setText(delivering.getId());
 
         holder.onClickListener = new View.OnClickListener() {
             @Override
@@ -94,6 +95,6 @@ public class RecyclerViewAdapterDelivering extends RecyclerView.Adapter<Recycler
     }
 
     public static interface MyItemOnClick {
-        public void getDeliveringInforation(Delivering delivering);
+        public void getDeliveringInforation(Bill delivering);
     }
 }

@@ -6,46 +6,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
         android:layout_weight="3"
-        >
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:text="@string/login"
             android:textColor="@color/black"
-            android:text="@string/login"/>
+            android:textSize="30dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="7"
-        >
+        android:orientation="vertical">
 
         <EditText
+            android:id="@+id/txtUsernameLogin"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintUsername"
             android:minHeight="48dp" />
 
         <EditText
+            android:id="@+id/txtPasswordLogin"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintPassword"
             android:minHeight="48dp" />
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/login"
             android:layout_marginTop="20dp"
-            />
+            android:text="@string/login" />
     </LinearLayout>
 
 </LinearLayout>

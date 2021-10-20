@@ -52,11 +52,13 @@
             android:orientation="vertical"
             android:gravity="center">
             <Button
+                android:id="@+id/btnDaNhanHangCanGiao"
                 android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_completed"
                 android:text="Đã nhận"/>
             <Button
+                android:id="@+id/btnHuyHangCanGiao"
                 android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_cancel"
