@@ -1,6 +1,7 @@
 package com.example.book.Object;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Bill {
     private String address;
@@ -12,11 +13,12 @@ public class Bill {
     private int totalMoney;
     private String phone;
     private String shipper;
+    private Date date;
 
     public Bill() {
     }
 
-    public Bill(String address, int discount, String id, String id_user, String name, int status, int totalMoney, String phone, String shipper) {
+    public Bill(String address, int discount, String id, String id_user, String name, int status, int totalMoney, String phone, String shipper, Date date) {
         this.address = address;
         this.discount = discount;
         this.id = id;
@@ -26,6 +28,15 @@ public class Bill {
         this.totalMoney = totalMoney;
         this.phone = phone;
         this.shipper = shipper;
+        this.date = date;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getShipper() {
