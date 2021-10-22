@@ -1,5 +1,6 @@
 package com.example.book.Screen;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -42,14 +44,18 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setEvent() {
+        toolbar();
+
         // lưu thông tin vào firebase:
         btnLuuSuaHoSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txtSoDienThoaiSuaHoSo.getText().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
-                } else if (txtHoVaTenSuaHoSo.getText().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
+                if (txtSoDienThoaiSuaHoSo.getText().toString().isEmpty()) {
+                    Dialog();
+                    //Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
+                } else if (txtHoVaTenSuaHoSo.getText().toString().isEmpty()) {
+                    Dialog();
+                    //Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
                 } else {
                     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
                     mDatabase.child(MainActivity.usernameApp).child("name").setValue(txtHoVaTenSuaHoSo.getText().toString());
@@ -60,6 +66,19 @@ public class Edit extends AppCompatActivity {
         });
 
 
+    }
+    private void Dialog(){
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        b.setTitle("Cảnh báo");
+        b.setMessage("Không được để trống");
+        b.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog al = b.create();
+        al.show();
     }
 
     public void getNameShipper() {

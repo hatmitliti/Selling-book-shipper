@@ -2,6 +2,7 @@ package com.example.book.Screen;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 
 public class DetailOrder extends AppCompatActivity {
     Toolbar toolbar;
-    Button btnFail, btnCompleted;
+    Button btnFail, btnCompleted,btnPhone;
     MyRecyclerViewAdapterDetail adapter;
     RecyclerView recyclerView;
     ArrayList<ProductInCart> detailArrayList = new ArrayList<>();
@@ -128,6 +129,14 @@ public class DetailOrder extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // bấm điện thoại
+        btnPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Uri uri = Uri.parse(txtPhoneChiTietDonHang.getText().toString());
+//                startActivity(new Intent(Intent.ACTION_DIAL,uri));
+            }
+        });
     }
 
     public void getDataInDatabase() {
@@ -169,6 +178,7 @@ public class DetailOrder extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv);
         btnCompleted = findViewById(R.id.btnCompleted);
         btnFail = findViewById(R.id.btnFail);
+        btnPhone = findViewById(R.id.btnPhone);
 
         txtNameChiTietDonHang = findViewById(R.id.txtNameChiTietDonHang);
         txtPhoneChiTietDonHang = findViewById(R.id.txtPhoneChiTietDonHang);
