@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.book.Adapter.MyRecyclerViewAdapter;
+import com.example.book.MainActivity;
 import com.example.book.Object.Confirm;
 import com.example.book.R;
 
@@ -58,7 +59,8 @@ public class ScreenConfirm extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }

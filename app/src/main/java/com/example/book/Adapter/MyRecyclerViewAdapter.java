@@ -29,8 +29,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater =context.getLayoutInflater();
-        CardView view = (CardView) layoutInflater.inflate(viewType,parent,false);
+        LayoutInflater layoutInflater = context.getLayoutInflater();
+        CardView view = (CardView) layoutInflater.inflate(viewType, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -52,7 +52,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView MaDH,LyDo;
+        TextView MaDH, LyDo;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             MaDH = itemView.findViewById(R.id.tvMDH);
