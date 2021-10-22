@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-<<<<<<< HEAD
-=======
 import android.widget.Toast;
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,23 +23,15 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-<<<<<<< HEAD
 import com.google.firebase.database.ValueEventListener;
-=======
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
 
 import java.util.ArrayList;
 
 public class Profile extends Fragment {
-<<<<<<< HEAD
-    Button btnEdit,btnAccount,btnLogOut;
-    TextView tvName;
-=======
     Button btnEdit, btnAccount, btnLogOut;
     TextView txtHoTenShipperInHoSo;
     Shipper shipper = new Shipper();
 
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,13 +39,7 @@ public class Profile extends Fragment {
         btnEdit = view.findViewById(R.id.btnEdit);
         btnAccount = view.findViewById(R.id.btnAccount);
         btnLogOut = view.findViewById(R.id.btnLogOut);
-<<<<<<< HEAD
-=======
         txtHoTenShipperInHoSo = view.findViewById(R.id.txtHoTenShipperInHoSo);
-
-
-
-
 
         getNameShipper();
         btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +61,6 @@ public class Profile extends Fragment {
                 startActivity(new Intent(getActivity(), Login.class));
             }
         });
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
         return view;
     }
 
@@ -94,6 +77,7 @@ public class Profile extends Fragment {
                     if (list.get(j).getId().equals(MainActivity.usernameApp)) {
                         shipper = list.get(j);
                         txtHoTenShipperInHoSo.setText(shipper.getName());
+
                     }
                 }
 

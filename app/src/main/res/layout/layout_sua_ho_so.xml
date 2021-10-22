@@ -35,21 +35,13 @@
         android:orientation="vertical">
 
         <EditText
-<<<<<<< HEAD
-            android:id="@+id/etHoTen"
-=======
             android:id="@+id/txtHoVaTenSuaHoSo"
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="Họ và tên" />
 
         <EditText
-<<<<<<< HEAD
-            android:id="@+id/etSDT"
-=======
             android:id="@+id/txtSoDienThoaiSuaHoSo"
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="Số điện thoại" />

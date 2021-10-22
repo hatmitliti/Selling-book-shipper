@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-<<<<<<< HEAD
-=======
+
 import android.widget.Toast;
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,14 +27,10 @@ import java.util.ArrayList;
 
 public class Edit extends AppCompatActivity {
     Toolbar toolbar;
-<<<<<<< HEAD
-    Button btnLuu;
-    EditText etSDT,etHoTen;
-=======
     Button btnLuuSuaHoSo;
     EditText txtHoVaTenSuaHoSo;
     EditText txtSoDienThoaiSuaHoSo;
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,24 +42,8 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setEvent() {
-<<<<<<< HEAD
-        toolbar();
-        btnLuu.setOnClickListener(new View.OnClickListener() {
-=======
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-
         // lưu thông tin vào firebase:
         btnLuuSuaHoSo.setOnClickListener(new View.OnClickListener() {
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
             @Override
             public void onClick(View v) {
                 if (txtSoDienThoaiSuaHoSo.getText().equals("")) {
@@ -134,15 +113,10 @@ public class Edit extends AppCompatActivity {
 
     private void setControl() {
         toolbar = findViewById(R.id.tbEditProfile);
-<<<<<<< HEAD
-        btnLuu = findViewById(R.id.btnLuu);
-        etHoTen = findViewById(R.id.etHoTen);
-        etSDT = findViewById(R.id.etSDT);
-=======
         btnLuuSuaHoSo = findViewById(R.id.btnLuuSuaHoSo);
         txtHoVaTenSuaHoSo = findViewById(R.id.txtHoVaTenSuaHoSo);
         txtSoDienThoaiSuaHoSo = findViewById(R.id.txtSoDienThoaiSuaHoSo);
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
+
     }
     private void toolbar() {
         setSupportActionBar(toolbar);

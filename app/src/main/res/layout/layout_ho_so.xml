@@ -25,11 +25,7 @@
             android:src="@drawable/img_profile" />
 
         <TextView
-<<<<<<< HEAD
-            android:id="@+id/tvName"
-=======
             android:id="@+id/txtHoTenShipperInHoSo"
->>>>>>> 05701adeeac22d3cf1bc0c0a0b15b465f9e43d10
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shipper A"
