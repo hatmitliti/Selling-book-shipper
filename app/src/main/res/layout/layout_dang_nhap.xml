@@ -40,6 +40,7 @@
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintPassword"
+            android:inputType="textPassword"
             android:minHeight="48dp" />
 
         <Button

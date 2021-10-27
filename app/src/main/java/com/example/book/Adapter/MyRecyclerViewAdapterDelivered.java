@@ -12,7 +12,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.book.Object.Bill;
-import com.example.book.Object.Delivered;
 import com.example.book.Object.FirebaseConnect;
 import com.example.book.R;
 
