@@ -12,7 +12,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.book.Object.Bill;
-import com.example.book.Object.Delivering;
 import com.example.book.R;
 
 import java.util.ArrayList;
