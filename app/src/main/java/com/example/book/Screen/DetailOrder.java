@@ -133,8 +133,8 @@ public class DetailOrder extends AppCompatActivity {
         btnPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Uri uri = Uri.parse(txtPhoneChiTietDonHang.getText().toString());
-//                startActivity(new Intent(Intent.ACTION_DIAL,uri));
+                Intent intent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:"+ phoneBill));
+                startActivity(intent);
             }
         });
     }
