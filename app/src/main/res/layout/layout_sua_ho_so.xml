@@ -37,21 +37,23 @@
         <EditText
             android:id="@+id/txtHoVaTenSuaHoSo"
             style="@style/EdittextStyle"
-            android:background="@drawable/border"
+            android:background="@drawable/border_listview"
             android:hint="Họ và tên" />
 
         <EditText
             android:id="@+id/txtSoDienThoaiSuaHoSo"
             style="@style/EdittextStyle"
-            android:background="@drawable/border"
+            android:background="@drawable/border_listview"
             android:hint="Số điện thoại" />
 
         <Button
             android:id="@+id/btnLuuSuaHoSo"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@color/black"
             android:text="Lưu" />
     </LinearLayout>
 
