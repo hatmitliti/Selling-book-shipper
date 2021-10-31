@@ -40,7 +40,7 @@ public class Account extends AppCompatActivity {
         getNameShipper();
 
     }
-
+    //Lấy Tên Shipper
     public void getNameShipper() {
         ArrayList<Shipper> list = new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
