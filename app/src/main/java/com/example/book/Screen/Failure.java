@@ -23,7 +23,6 @@ public class Failure extends AppCompatActivity {
         setContentView(R.layout.layout_ly_do_that_bai);
          intent = getIntent();
         setControl();
-        //set mã đơn hàng
         //txtMaDHThatBai.setText(intent.getStringExtra("idBill"));
         setEvent();
 
