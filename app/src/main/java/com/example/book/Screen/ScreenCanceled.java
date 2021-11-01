@@ -32,6 +32,7 @@ public class ScreenCanceled extends AppCompatActivity {
     ArrayList<Bill> canceledArrayList = new ArrayList<>();
     ArrayList<String> mKey = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +61,7 @@ public class ScreenCanceled extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+    // lọc các đơn hàng có mã trạng thái khác 10
     public void loc() {
         for (int j = 0; j < canceledArrayList.size(); j++) {
             if (canceledArrayList.get(j).getStatus() != 10) {
@@ -70,6 +72,7 @@ public class ScreenCanceled extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    // lấy dữ liệu đơn hàng bị hủy
     private void getDataInDatabase() {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("bills").addChildEventListener(new ChildEventListener() {
