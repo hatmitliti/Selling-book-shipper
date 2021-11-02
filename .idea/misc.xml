@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.25" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_dang_nhap.xml" value="0.1082427536231884" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_sua_ho_so.xml" value="0.1082427536231884" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_trang_chu.xml" value="0.1" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_xac_nhan_ly_do_that_bai.xml" value="0.1082427536231884" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Selling-book-shipper/app/src/main/res/drawable/border.xml" value="0.2203125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Selling-book-shipper/app/src/main/res/drawable/border_listview.xml" value="0.2203125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Selling-book-shipper/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
