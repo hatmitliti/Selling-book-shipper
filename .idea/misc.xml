@@ -3,10 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_chi_tiet_don_hang.xml" value="0.1105072463768116" />
         <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.25" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_don_hang_da_giao.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_don_hang_da_huy.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_don_hang_dang_giao.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/item_xac_nhan_ly_do_that_bai.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_chi_tiet_don_hang.xml" value="0.10280797101449275" />
         <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_dang_nhap.xml" value="0.1082427536231884" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_can_giao.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_da_giao.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_da_huy.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_dang_giao.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_ho_so.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_khach_huy.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_khong_lien_lac_duoc.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_that_bai.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_thay_doi_thong_tin.xml" value="0.10280797101449275" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_quan_ly_tai_khoan.xml" value="0.10280797101449275" />
         <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_sua_ho_so.xml" value="0.1082427536231884" />
-        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_trang_chu.xml" value="0.1" />
+        <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_trang_chu.xml" value="0.25" />
         <entry key="..\:/Git/Selling-book-shipper/app/src/main/res/layout/layout_xac_nhan_ly_do_that_bai.xml" value="0.1082427536231884" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Selling-book-shipper/app/src/main/res/drawable/border.xml" value="0.2203125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Selling-book-shipper/app/src/main/res/drawable/border_listview.xml" value="0.2203125" />

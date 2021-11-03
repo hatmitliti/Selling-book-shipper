@@ -14,25 +14,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="5"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="3"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="7"
         android:orientation="vertical"
         >
         <Button
             android:id="@+id/btnHDH"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Khách hàng muốn hủy đơn hàng"
             />
         <Button
             android:id="@+id/btnTDH"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Khách hàng đặt trùng đơn hàng"/>
     </LinearLayout>

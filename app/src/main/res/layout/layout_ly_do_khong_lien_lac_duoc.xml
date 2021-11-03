@@ -14,25 +14,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="5"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="3"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="7"
         android:orientation="vertical"
         >
         <Button
             android:id="@+id/btnKCNN"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Đúng địa chỉ không có người nhận"
             />
         <Button
             android:id="@+id/btnKCX"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Địa chỉ không đầy đủ,không chính xác,không tồn tại"/>
     </LinearLayout>

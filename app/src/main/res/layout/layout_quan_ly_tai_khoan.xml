@@ -21,12 +21,19 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/name"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Họ và tên:"
+            android:paddingLeft="10dp"
+            android:paddingTop="13dp"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txtHoVaTenQLTK"
@@ -35,7 +42,7 @@
             android:layout_marginLeft="30dp"
             android:text="Shipper A"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,12 +51,18 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/phone"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Số điện thoại:"
+            android:paddingLeft="10dp"
+            android:paddingTop="13dp"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txtSoDienThoaiQLTK"
@@ -58,7 +71,7 @@
             android:layout_marginLeft="10dp"
             android:text="0123456789"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -67,13 +80,19 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/date"/>
         <TextView
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ngày sinh:"
+            android:paddingLeft="10dp"
+            android:paddingTop="13dp"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txtNgaySinhQLTK"
@@ -82,7 +101,7 @@
             android:layout_marginLeft="30dp"
             android:text="1/1/2000"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
 </LinearLayout>

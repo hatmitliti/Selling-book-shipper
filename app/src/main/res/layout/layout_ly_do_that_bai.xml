@@ -41,23 +41,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="7"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
         <Button
             android:id="@+id/btnKLLD"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Không liên lạc được" />
 
         <Button
             android:id="@+id/btnTDTT"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Thay đổi thông tin" />
 
         <Button
             android:id="@+id/btnKH"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:text="Khách hủy" />
     </LinearLayout>
