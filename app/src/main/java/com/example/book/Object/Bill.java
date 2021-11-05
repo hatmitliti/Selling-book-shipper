@@ -1,8 +1,8 @@
 package com.example.book.Object;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Bill {
+public class Bill implements Serializable {
     private String address;
     private int discount;
     private String id;
@@ -12,11 +12,14 @@ public class Bill {
     private int totalMoney;
     private String phone;
     private String shipper;
+    private String date;
+    private boolean evalute;
+
 
     public Bill() {
     }
 
-    public Bill(String address, int discount, String id, String id_user, String name, int status, int totalMoney, String phone, String shipper) {
+    public Bill(String address, int discount, String id, String id_user, String name, int status, int totalMoney, String phone, String shipper, String date, boolean evalute) {
         this.address = address;
         this.discount = discount;
         this.id = id;
@@ -26,22 +29,8 @@ public class Bill {
         this.totalMoney = totalMoney;
         this.phone = phone;
         this.shipper = shipper;
-    }
-
-    public String getShipper() {
-        return shipper;
-    }
-
-    public void setShipper(String shipper) {
-        this.shipper = shipper;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+        this.date = date;
+        this.evalute = evalute;
     }
 
     public String getAddress() {
@@ -99,4 +88,37 @@ public class Bill {
     public void setTotalMoney(int totalMoney) {
         this.totalMoney = totalMoney;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getShipper() {
+        return shipper;
+    }
+
+    public void setShipper(String shipper) {
+        this.shipper = shipper;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public boolean isEvalute() {
+        return evalute;
+    }
+
+    public void setEvalute(boolean evalute) {
+        this.evalute = evalute;
+    }
 }
+

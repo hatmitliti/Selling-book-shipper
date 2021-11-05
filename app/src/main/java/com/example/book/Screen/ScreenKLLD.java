@@ -32,16 +32,27 @@ public class ScreenKLLD extends AppCompatActivity {
                onBackPressed();
             }
         });
+
         btnKCNN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenConfirm.class));
+                Intent intent = getIntent();
+                Intent intent1 = new Intent(getApplicationContext(), ScreenConfirm.class);
+                intent1.putExtra("idBill", intent.getStringExtra("idBill"));
+                intent1.putExtra("reason", intent.getStringExtra("reason"));
+                intent1.putExtra("reason2", btnKCNN.getText());
+                startActivity(intent1);
             }
         });
         btnKCX.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenConfirm.class));
+                Intent intent = getIntent();
+                Intent intent1 = new Intent(getApplicationContext(), ScreenConfirm.class);
+                intent1.putExtra("idBill", intent.getStringExtra("idBill"));
+                intent1.putExtra("reason", intent.getStringExtra("reason"));
+                intent1.putExtra("reason2", btnKCX.getText());
+                startActivity(intent1);
             }
         });
     }

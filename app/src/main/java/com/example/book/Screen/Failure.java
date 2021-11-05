@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,14 +12,21 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.book.R;
 
 public class Failure extends AppCompatActivity {
+    TextView txtMaDHThatBai;
     Toolbar toolbar;
-    Button btnKLLD,btnTDTT,btnKH;
+    Button btnKLLD, btnTDTT, btnKH;
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_ly_do_that_bai);
+         intent = getIntent();
         setControl();
+        //set mã đơn hàng
+        //txtMaDHThatBai.setText(intent.getStringExtra("idBill"));
         setEvent();
+
     }
 
     private void setEvent() {
@@ -31,22 +39,36 @@ public class Failure extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+
+
         btnKLLD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenKLLD.class));
+                Intent intent1 = new Intent(getApplicationContext(),ScreenKLLD.class);
+                intent1.putExtra("idBill",intent.getStringExtra("idBill"));
+                intent1.putExtra("reason",btnKLLD.getText());
+                startActivity(intent1);
             }
         });
+
         btnTDTT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenTDTT.class));
+                Intent intent1 = new Intent(getApplicationContext(),ScreenTDTT.class);
+                intent1.putExtra("idBill",intent.getStringExtra("idBill"));
+                intent1.putExtra("reason",btnKLLD.getText());
+                startActivity(intent1);
             }
         });
+
         btnKH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenKH.class));
+                Intent intent1 = new Intent(getApplicationContext(),ScreenKH.class);
+                intent1.putExtra("idBill",intent.getStringExtra("idBill"));
+                intent1.putExtra("reason",btnKLLD.getText());
+                startActivity(intent1);
             }
         });
     }
@@ -56,5 +78,6 @@ public class Failure extends AppCompatActivity {
         btnKH = findViewById(R.id.btnKH);
         btnKLLD = findViewById(R.id.btnKLLD);
         btnTDTT = findViewById(R.id.btnTDTT);
+        txtMaDHThatBai = findViewById(R.id.txtMaDHThatBai);
     }
 }

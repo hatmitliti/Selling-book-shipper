@@ -17,9 +17,34 @@ import java.util.ArrayList;
 
 public class FirebaseConnect {
 
-    public  static  void setOrderReceivedBill(Bill bill){
+    public static void setOrderReceivedBill(Bill bill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(bill.getId()).child("status").setValue(4);
+    }
+
+    public static void setOrderCancelBill(Bill bill) {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
         mDatabase.child(bill.getId()).child("status").setValue(2);
+    }
+
+    public static void setcompleteBill(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(5);
+    }
+
+    public static void setcancelingOrders(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(10);
+    }
+
+    public static void setDaGiaoTienDHCanGiao(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(6);
+    }
+
+    public static void setDaTraHangDonHang(String idBill) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("bills");
+        mDatabase.child(idBill).child("status").setValue(8);
     }
 
 }

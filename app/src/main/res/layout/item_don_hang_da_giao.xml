@@ -46,6 +46,8 @@
                 android:layout_height="wrap_content"
                 android:text="Tên người nhận"/>
             <TextView
+                android:textStyle="bold"
+                android:textSize="11dp"
                 android:id="@+id/tvMDH"
                 android:layout_marginBottom="2dp"
                 android:textColor="@color/black"
@@ -59,6 +61,7 @@
             android:orientation="vertical"
             android:gravity="center">
             <Button
+                android:id="@+id/btnDaGiaoTienDaGiao"
                 android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_completed"

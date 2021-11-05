@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book.Object.Delivery;
+import com.example.book.Object.Bill;
+import com.example.book.Object.FirebaseConnect;
 import com.example.book.R;
 
 import java.util.ArrayList;
@@ -18,12 +20,13 @@ import java.util.ArrayList;
 public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRecyclerViewAdapterNeedDelivery.MyHolderViewNeedDelivery> {
     private Activity context;
     private int layoutID;
-    private ArrayList<Delivery> deliveryArrayList;
+    private ArrayList<Bill> deliveryArrayList;
 
-    public MyRecyclerViewAdapterNeedDelivery(Activity context, int layoutID, ArrayList<Delivery> deliveryArrayList) {
+    public MyRecyclerViewAdapterNeedDelivery(Activity context, int layoutID, ArrayList<Bill> deliveryArrayList) {
         this.context = context;
         this.layoutID = layoutID;
         this.deliveryArrayList = deliveryArrayList;
+
     }
 
     @NonNull
@@ -36,11 +39,28 @@ public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRe
 
     @Override
     public void onBindViewHolder(@NonNull MyHolderViewNeedDelivery holder, int position) {
-        Delivery delivery = deliveryArrayList.get(position);
-        holder.tvTT.setText(delivery.getTrangThai());
-        holder.tvDC.setText(delivery.getDiaChi());
-        holder.tvTNN.setText(delivery.getTenNgNhan());
-        holder.tvMDH.setText(delivery.getMaDH());
+        Bill delivery = deliveryArrayList.get(position);
+        holder.tvTT.setText("Cần giao");
+        holder.tvDC.setText(delivery.getAddress());
+        holder.tvTNN.setText(delivery.getName());
+        holder.tvMDH.setText(delivery.getId());
+
+        // bấm xác nhận để nhận đơn và đi giao
+        holder.btnDaNhanHangCanGiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseConnect.setOrderReceivedBill(delivery);
+
+            }
+        });
+        // bấm hủy đơn hàng sẽ quay lại trạng thái đã đóng gói
+        holder.btnHuyHangCanGiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseConnect.setOrderCancelBill(delivery);
+            }
+        });
+
     }
 
     @Override
@@ -55,6 +75,8 @@ public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRe
 
     public static class MyHolderViewNeedDelivery extends RecyclerView.ViewHolder {
         TextView tvTT, tvDC, tvTNN, tvMDH;
+        Button btnDaNhanHangCanGiao;
+        Button btnHuyHangCanGiao;
 
         public MyHolderViewNeedDelivery(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +84,8 @@ public class MyRecyclerViewAdapterNeedDelivery extends RecyclerView.Adapter<MyRe
             tvDC = itemView.findViewById(R.id.tvDC);
             tvTNN = itemView.findViewById(R.id.tvTNN);
             tvMDH = itemView.findViewById(R.id.tvMDH);
+            btnDaNhanHangCanGiao = itemView.findViewById(R.id.btnDaNhanHangCanGiao);
+            btnHuyHangCanGiao = itemView.findViewById(R.id.btnHuyHangCanGiao);
         }
     }
 }

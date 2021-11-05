@@ -13,7 +13,8 @@ import com.example.book.R;
 
 public class ScreenKH extends AppCompatActivity {
     Toolbar toolbar;
-    Button btnHDH,btnTDH;
+    Button btnHDH, btnTDH;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,19 +30,31 @@ public class ScreenKH extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               onBackPressed();
+                onBackPressed();
             }
         });
+
         btnHDH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenConfirm.class));
+                Intent intent = getIntent();
+                Intent intent1 = new Intent(getApplicationContext(), ScreenConfirm.class);
+                intent1.putExtra("idBill", intent.getStringExtra("idBill"));
+                intent1.putExtra("reason", intent.getStringExtra("reason"));
+                intent1.putExtra("reason2", btnHDH.getText());
+                startActivity(intent1);
             }
         });
+
         btnTDH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ScreenConfirm.class));
+                Intent intent = getIntent();
+                Intent intent1 = new Intent(getApplicationContext(), ScreenConfirm.class);
+                intent1.putExtra("idBill", intent.getStringExtra("idBill"));
+                intent1.putExtra("reason", intent.getStringExtra("reason"));
+                intent1.putExtra("reason2", btnHDH.getText());
+                startActivity(intent1);
             }
         });
     }

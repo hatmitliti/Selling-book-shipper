@@ -17,23 +17,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_weight="3"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mã đơn hàng"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="214W4364DS"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            />
-    </LinearLayout>
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#FF5722"
+    android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="5"
         android:gravity="center"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_profile"
-            android:textSize="30dp"
             android:textColor="@color/black"
-            />
+            android:textSize="30dp" />
+
         <ImageView
+            android:id="@+id/imgShipper"
             android:layout_width="70dp"
             android:layout_height="100dp"
-            android:src="@drawable/img_profile"
-            />
+            android:src="@drawable/img_profile" />
+
         <TextView
+            android:id="@+id/txtHoTenShipperInHoSo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shipper A"
-            android:textSize="30dp"
             android:textColor="@color/black"
-            />
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -37,11 +40,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btnEdit"
                 android:layout_width="120dp"
@@ -69,6 +74,7 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
+                android:rotationY="72"
                 android:text="Đăng xuất" />
         </LinearLayout>
     </LinearLayout>

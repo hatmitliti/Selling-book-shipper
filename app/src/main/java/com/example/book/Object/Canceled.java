@@ -1,7 +1,7 @@
 package com.example.book.Object;
 
 public class Canceled {
-    String TrangThai,DiaChi,TenNgNhan,MaDH;
+    String TrangThai, DiaChi, TenNgNhan, MaDH;
 
     public String getTrangThai() {
         return TrangThai;
