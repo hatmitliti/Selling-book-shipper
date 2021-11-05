@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:text="Cần giao"
+                android:text="Cần giao:"
                 android:textColor="@color/black" />
 
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:text="Địa chỉ"
+                android:text="Địa chỉ:"
                 android:textColor="@color/black" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:text="Tên người nhận"
+                android:text="Tên người nhận:"
                 android:textColor="@color/black" />
 
             <TextView
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:text="Mã đơn hàng"
+                android:text="Mã đơn hàng:"
                 android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
