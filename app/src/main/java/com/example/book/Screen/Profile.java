@@ -69,10 +69,12 @@ public class Profile extends Fragment {
     public void getNameShipper() {
         ArrayList<Shipper> list = new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
+
         mDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Shipper shipp = snapshot.getValue(Shipper.class);
+             //   if (shipp.getId().equals())
                 shipp.setId(snapshot.getKey());
                 list.add(shipp);
                 for (int j = 0; j < list.size(); j++) {

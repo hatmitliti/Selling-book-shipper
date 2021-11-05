@@ -39,6 +39,8 @@
                 android:layout_height="wrap_content"
                 android:text="Tên người nhận"/>
             <TextView
+                android:textStyle="bold"
+                android:textSize="11dp"
                 android:id="@+id/tvMDH"
                 android:layout_marginBottom="2dp"
                 android:textColor="@color/black"

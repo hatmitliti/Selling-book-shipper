@@ -4,12 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_chi_tiet_don_hang.xml" value="0.264" />
-        <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.1539855072463768" />
+        <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.264" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_da_giao.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_da_huy.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_dang_giao.xml" value="0.2115036231884058" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_chi_tiet_don_hang.xml" value="0.2259963768115942" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_dang_nhap.xml" value="0.14764492753623187" />
+        <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_don_hang_can_giao.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_don_hang_da_giao.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_ho_so.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/layout_ly_do_khach_huy.xml" value="0.21105072463768115" />
