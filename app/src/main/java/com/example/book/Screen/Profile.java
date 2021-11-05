@@ -17,6 +17,10 @@ import com.example.book.MainActivity;
 import com.example.book.Object.FirebaseConnect;
 import com.example.book.Object.Shipper;
 import com.example.book.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Profile extends Fragment {
-    Button btnEdit, btnAccount, btnLogOut;
+    Button btnEdit, btnAccount, btnLogOut,btnForgotPassword;
     TextView txtHoTenShipperInHoSo;
     Shipper shipper = new Shipper();
 
@@ -37,11 +41,8 @@ public class Profile extends Fragment {
         btnEdit = view.findViewById(R.id.btnEdit);
         btnAccount = view.findViewById(R.id.btnAccount);
         btnLogOut = view.findViewById(R.id.btnLogOut);
+        btnForgotPassword = view.findViewById(R.id.btnForgotPassword);
         txtHoTenShipperInHoSo = view.findViewById(R.id.txtHoTenShipperInHoSo);
-
-
-
-
 
         getNameShipper();
         btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +64,30 @@ public class Profile extends Fragment {
                 startActivity(new Intent(getActivity(), Login.class));
             }
         });
+        btnForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgotPassword();
+            }
+        });
         return view;
+    }
+
+    private void forgotPassword() {
+        FirebaseAuth mAuth=FirebaseAuth.getInstance();
+        FirebaseUser mUser=mAuth.getCurrentUser();
+        String email= mUser.getEmail();
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getActivity(), "Gửi email đổi mật khẩu thành công. Vui lòng kiểm tra email!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getActivity(), "Gửi email đổi mật khẩu thất bại!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     public void getNameShipper() {
