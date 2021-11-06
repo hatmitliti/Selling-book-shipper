@@ -31,7 +31,7 @@ public class ScreenDelivered extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Bill> deliveredArrayList = new ArrayList<>();
     ArrayList<String> mKey = new ArrayList<>();
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

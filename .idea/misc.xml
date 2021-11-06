@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Desktop/Selling-book-shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/Desktop/Selling-book-shipper/app/src/main/res/layout/item_don_hang_da_huy.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Admin/Desktop/Selling-book-shipper/app/src/main/res/layout/layout_chi_tiet_don_hang.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_chi_tiet_don_hang.xml" value="0.264" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.1539855072463768" />
         <entry key="..\:/Users/truon/Desktop/Shipper/app/src/main/res/layout/item_don_hang_da_giao.xml" value="0.2056159420289855" />
