@@ -30,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Profile extends Fragment {
-    Button btnEdit, btnAccount, btnLogOut,btnForgotPassword;
+    Button btnEdit, btnAccount, btnLogOut,btnForgotPassword,btnChangePassword;
     TextView txtHoTenShipperInHoSo;
     Shipper shipper = new Shipper();
 
@@ -43,6 +43,7 @@ public class Profile extends Fragment {
         btnLogOut = view.findViewById(R.id.btnLogOut);
         btnForgotPassword = view.findViewById(R.id.btnForgotPassword);
         txtHoTenShipperInHoSo = view.findViewById(R.id.txtHoTenShipperInHoSo);
+        btnChangePassword = view.findViewById(R.id.btnProfile_ChangePassword);
 
         getNameShipper();
         btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,12 @@ public class Profile extends Fragment {
             @Override
             public void onClick(View v) {
                 forgotPassword();
+            }
+        });
+        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ChangePasswordActivity.class));
             }
         });
         return view;

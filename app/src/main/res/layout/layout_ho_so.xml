@@ -76,12 +76,26 @@
                 android:layout_marginRight="30dp"
                 android:text="Quên mật khẩu" />
             <Button
+                android:id="@+id/btnProfile_ChangePassword"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Đổi mật khẩu" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
                 android:id="@+id/btnLogOut"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:rotationY="72"
                 android:text="Đăng xuất" />
         </LinearLayout>
     </LinearLayout>
