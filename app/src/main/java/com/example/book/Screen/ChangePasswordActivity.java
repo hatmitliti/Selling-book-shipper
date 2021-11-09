@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.book.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ChangePasswordActivity extends AppCompatActivity {
+    Toolbar toolbar;
     EditText edtCurrentPassword, edtNewPassword, edtRePassword;
     Button btnChangPassword;
     FirebaseUser user;
@@ -27,16 +29,25 @@ public class ChangePasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mapping();
         //init firebase
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
-        mapping();
         setEvent();
     }
 
     private void setEvent() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         btnChangPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +60,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
         String email = user.getEmail();
         String password = edtCurrentPassword.getText().toString().trim();
 
-        if(password.isEmpty()) {
-            edtNewPassword.setError("Trường mật khẩu trống!");
-        }else {
+        if (password.isEmpty()) {
+            edtCurrentPassword.setError("Trường mật khẩu trống!");
+        } else {
             AuthCredential credential = EmailAuthProvider
                     .getCredential(email, password);
             user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -59,8 +70,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
                         changePassword();
-                    }
-                    else {
+                    } else {
                         Toast.makeText(getApplicationContext(), "Mật khẩu hiện tại không đúng!", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -72,21 +82,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
         String password = edtNewPassword.getText().toString().trim();
         String repassword = edtRePassword.getText().toString().trim();
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             edtNewPassword.setError("Trường mật khẩu trống!");
-        }else if(repassword.isEmpty()){
+        } else if (repassword.isEmpty()) {
             edtRePassword.setError("Trường nhập lại mật khẩu trống!");
-        }else if(!repassword.equalsIgnoreCase(password)){
+        } else if (!repassword.equalsIgnoreCase(password)) {
             edtRePassword.setError("Nhập lại mật khẩu không khớp!");
-        }
-        else{
+        } else {
             user.updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "Đổi mật khẩu thành công!", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                    } else {
                         Toast.makeText(getApplicationContext(), "Đổi mật khẩu không thành công!", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -95,10 +103,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
     }
 
     private void mapping() {
+        toolbar = findViewById(R.id.tbChangePassword);
         edtCurrentPassword = findViewById(R.id.edt_current_password);
         edtNewPassword = findViewById(R.id.edt_change_password);
         edtRePassword = findViewById(R.id.edt_re_enter_password);
         btnChangPassword = findViewById(R.id.btnChangePassword);
     }
-
 }
