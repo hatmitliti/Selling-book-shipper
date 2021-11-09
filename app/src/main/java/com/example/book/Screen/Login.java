@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void setEvent() {
-        // khi bấm đăng nhập::::::::
+        // khi bấm đăng nhập:
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

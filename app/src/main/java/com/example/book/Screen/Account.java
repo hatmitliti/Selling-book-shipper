@@ -36,7 +36,7 @@ public class Account extends AppCompatActivity {
         setEvent();
 
 
-        // Hiển thị đúng dữ liệu
+        // Hiển thị đúng dữ liệu:
         getNameShipper();
 
     }
@@ -91,7 +91,7 @@ public class Account extends AppCompatActivity {
             }
         });
     }
-
+    //
     private void setEvent() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
