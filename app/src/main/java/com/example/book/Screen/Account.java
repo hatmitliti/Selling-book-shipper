@@ -27,6 +27,10 @@ public class Account extends AppCompatActivity {
     TextView txtHoVaTenQLTK;
     TextView txtSoDienThoaiQLTK;
     TextView txtNgaySinhQLTK;
+    TextView txtid;
+    TextView txtemail;
+    TextView txtluongcb;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +38,8 @@ public class Account extends AppCompatActivity {
         setContentView(R.layout.layout_quan_ly_tai_khoan);
         setControl();
         setEvent();
-
-
         // Hiển thị đúng dữ liệu
         getNameShipper();
-
     }
 
     public void getNameShipper() {
@@ -53,8 +54,12 @@ public class Account extends AppCompatActivity {
                 for (int j = 0; j < list.size(); j++) {
                     if (list.get(j).getId().equals(MainActivity.usernameApp)) {
                         txtHoVaTenQLTK.setText(list.get(j).getName());
-                        txtSoDienThoaiQLTK.setText(list.get(j).getPhone());
+                        txtSoDienThoaiQLTK.setText(list.get(j).getSdt());
                         txtNgaySinhQLTK.setText(list.get(j).getBirth());
+
+                        txtid.setText(list.get(j).getId());
+                        txtemail.setText(list.get(j).getEmail());
+                        txtluongcb.setText(list.get(j).getLuongCB() + "");
                     }
                 }
 
@@ -68,8 +73,12 @@ public class Account extends AppCompatActivity {
                 for (int j = 0; j < list.size(); j++) {
                     if (list.get(j).getId().equals(MainActivity.usernameApp)) {
                         txtHoVaTenQLTK.setText(list.get(j).getName());
-                        txtSoDienThoaiQLTK.setText(list.get(j).getPhone());
+                        txtSoDienThoaiQLTK.setText(list.get(j).getSdt());
                         txtNgaySinhQLTK.setText(list.get(j).getBirth());
+
+                        txtid.setText(list.get(j).getId());
+                        txtemail.setText(list.get(j).getEmail());
+                        txtluongcb.setText(list.get(j).getLuongCB() + "");
                     }
                 }
 
@@ -96,8 +105,6 @@ public class Account extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
-
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,5 +118,8 @@ public class Account extends AppCompatActivity {
         txtHoVaTenQLTK = findViewById(R.id.txtHoVaTenQLTK);
         txtSoDienThoaiQLTK = findViewById(R.id.txtSoDienThoaiQLTK);
         txtNgaySinhQLTK = findViewById(R.id.txtNgaySinhQLTK);
+        txtid = findViewById(R.id.txtid);
+        txtemail = findViewById(R.id.txtemail);
+        txtluongcb = findViewById(R.id.txtluongcb);
     }
 }
