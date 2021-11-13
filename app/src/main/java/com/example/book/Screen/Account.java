@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Account extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
 
 
     TextView txtHoVaTenQLTK;
@@ -37,9 +37,21 @@ public class Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_quan_ly_tai_khoan);
         setControl();
-        setEvent();
+
         // Hiển thị đúng dữ liệu
         getNameShipper();
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
     public void getNameShipper() {
@@ -101,20 +113,9 @@ public class Account extends AppCompatActivity {
         });
     }
 
-    private void setEvent() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-    }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+       // toolbar = findViewById(R.id.tb);
         txtHoVaTenQLTK = findViewById(R.id.txtHoVaTenQLTK);
         txtSoDienThoaiQLTK = findViewById(R.id.txtSoDienThoaiQLTK);
         txtNgaySinhQLTK = findViewById(R.id.txtNgaySinhQLTK);

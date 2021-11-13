@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#B2DD7F"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,9 +20,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_weight="7"
         android:orientation="vertical">
 
@@ -48,6 +48,17 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/txtQuenMK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Quên mật khẩu"
+            android:textColor="@color/background_button_cancel"
+            android:textStyle="bold" />
     </LinearLayout>
+
 
 </LinearLayout>

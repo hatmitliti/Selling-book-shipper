@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 
 public class DetailOrder extends AppCompatActivity {
-    Toolbar toolbar;
+   // Toolbar toolbar;
     Button btnFail, btnCompleted;
     MyRecyclerViewAdapterDetail adapter;
     RecyclerView recyclerView;
@@ -59,8 +59,20 @@ public class DetailOrder extends AppCompatActivity {
         setControl();
         setIntent();
         setEvent();
-        setTooBar();
+
         setTextData();
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
     private void setTextData() {
@@ -86,17 +98,7 @@ public class DetailOrder extends AppCompatActivity {
     }
 
 
-    private void setTooBar() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ScreenDelivering.class));
-            }
-        });
-    }
+
 
     private void setEvent() {
         //  detailArrayList.add(new Detail("214DW4364DS", "1000"));
@@ -165,7 +167,7 @@ public class DetailOrder extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+      //  toolbar = findViewById(R.id.tb);
         recyclerView = findViewById(R.id.rv);
         btnCompleted = findViewById(R.id.btnCompleted);
         btnFail = findViewById(R.id.btnFail);

@@ -30,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Profile extends Fragment {
-    Button btnEdit, btnAccount, btnLogOut,btnForgotPassword,btnChangePassword;
+    Button btnEdit, btnAccount, btnLogOut, btnForgotPassword, btnChangePassword;
     TextView txtHoTenShipperInHoSo;
     Shipper shipper = new Shipper();
 
@@ -81,16 +81,15 @@ public class Profile extends Fragment {
     }
 
     private void forgotPassword() {
-        FirebaseAuth mAuth=FirebaseAuth.getInstance();
-        FirebaseUser mUser=mAuth.getCurrentUser();
-        String email= mUser.getEmail();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser mUser = mAuth.getCurrentUser();
+        String email = mUser.getEmail();
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     Toast.makeText(getActivity(), "Gửi email đổi mật khẩu thành công. Vui lòng kiểm tra email!", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     Toast.makeText(getActivity(), "Gửi email đổi mật khẩu thất bại!", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -105,7 +104,7 @@ public class Profile extends Fragment {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Shipper shipp = snapshot.getValue(Shipper.class);
-             //   if (shipp.getId().equals())
+                //   if (shipp.getId().equals())
                 shipp.setId(snapshot.getKey());
                 list.add(shipp);
                 for (int j = 0; j < list.size(); j++) {

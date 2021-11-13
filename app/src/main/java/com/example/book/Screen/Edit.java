@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Edit extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnLuuSuaHoSo;
     EditText txtHoVaTenSuaHoSo;
     EditText txtSoDienThoaiSuaHoSo;
@@ -40,6 +40,8 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -49,6 +51,7 @@ public class Edit extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
 
 
         // lưu thông tin vào firebase:
@@ -126,7 +129,7 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tbEditProfile);
+      //  toolbar = findViewById(R.id.tbEditProfile);
         btnLuuSuaHoSo = findViewById(R.id.btnLuuSuaHoSo);
         txtHoVaTenSuaHoSo = findViewById(R.id.txtHoVaTenSuaHoSo);
         txtSoDienThoaiSuaHoSo = findViewById(R.id.txtSoDienThoaiSuaHoSo);

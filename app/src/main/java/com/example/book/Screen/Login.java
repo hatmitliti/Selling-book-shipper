@@ -1,10 +1,18 @@
 package com.example.book.Screen;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +23,8 @@ import com.example.book.MainActivity;
 import com.example.book.Object.Shipper;
 import com.example.book.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,19 +37,23 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.lang.reflect.Array;
+import java.util.Calendar;
+
 public class Login extends AppCompatActivity {
     Button btnLogin;
     EditText txtUsernameLogin;
     EditText txtPasswordLogin;
     FirebaseAuth auth;
     FirebaseUser user;
+    TextView txtQuenMK;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dang_nhap);
         setControl();
-
         setEvent();
     }
 
@@ -99,6 +113,14 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        // bấm quên mk:
+        txtQuenMK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ForgetPass.class));
+            }
+        });
     }
 
 
@@ -106,5 +128,6 @@ public class Login extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         txtPasswordLogin = findViewById(R.id.txtPasswordLogin);
         txtUsernameLogin = findViewById(R.id.txtUsernameLogin);
+        txtQuenMK = findViewById(R.id.txtQuenMK);
     }
 }

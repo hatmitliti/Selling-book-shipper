@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.book.R;
 
 public class ScreenKH extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnHDH, btnTDH;
 
     @Override
@@ -24,6 +24,8 @@ public class ScreenKH extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -60,7 +62,7 @@ public class ScreenKH extends AppCompatActivity {
     }
 
     private void setConTrol() {
-        toolbar = findViewById(R.id.tb);
+    //    toolbar = findViewById(R.id.tb);
         btnHDH = findViewById(R.id.btnHDH);
         btnTDH = findViewById(R.id.btnTDH);
     }

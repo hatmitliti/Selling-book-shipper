@@ -8,12 +8,14 @@
     tools:context=".Screen.Account">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        app:title="Quản lý tài khoản"
-        app:titleTextColor="@color/white" />
+        android:background="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Quản lý tài khoản" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 
 public class ScreenCanceled extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     MyRecyclerViewAdapterCanceled adapter;
     RecyclerView recyclerView;
     ArrayList<Bill> canceledArrayList = new ArrayList<>();
@@ -38,15 +38,18 @@ public class ScreenCanceled extends AppCompatActivity {
         setContentView(R.layout.layout_don_hang_da_huy);
         setControl();
         setEvent();
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                onBackPressed();
             }
         });
+
     }
 
     private void setEvent() {
@@ -121,7 +124,7 @@ public class ScreenCanceled extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+      //  toolbar = findViewById(R.id.tb);
         recyclerView = findViewById(R.id.rv);
     }
 }
