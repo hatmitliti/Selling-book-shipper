@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
     EditText txtUsernameLogin;
     EditText txtPasswordLogin;
     FirebaseAuth auth;
-    FirebaseUser user;
+    FirebaseUser user__;
     TextView txtQuenMK;
 
     @Override
@@ -54,7 +54,14 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dang_nhap);
         setControl();
+        auth = FirebaseAuth.getInstance();
         setEvent();
+
+        user__ = auth.getCurrentUser();
+        if (user__ != null) {
+            MainActivity.usernameApp = auth.getUid();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
     }
 
     private void setEvent() {
@@ -70,7 +77,7 @@ public class Login extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Vui lòng nhập mật khẩu!", Toast.LENGTH_SHORT).show();
                 } else {
-                    auth = FirebaseAuth.getInstance();
+
                     auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
