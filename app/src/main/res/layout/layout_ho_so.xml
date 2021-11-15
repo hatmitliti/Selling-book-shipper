@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="#FF5722"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -20,16 +19,17 @@
             android:textColor="@color/black"
             android:textSize="30dp" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgShipper"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
-            android:src="@drawable/img_profile" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_account_circle" />
 
         <TextView
             android:id="@+id/txtHoTenShipperInHoSo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Shipper A"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -39,64 +39,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
+
         android:orientation="vertical">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textSize="18dp"
+            android:background="@drawable/bg_conner_button"
+            android:layout_marginBottom="15dp"
+            android:text="Chỉnh sửa" />
 
-            <Button
-                android:id="@+id/btnEdit"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginRight="30dp"
-                android:text="Chỉnh sửa" />
-
-            <Button
-                android:id="@+id/btnAccount"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:text="Tài khoản" />
-        </LinearLayout>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/btnAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:background="@drawable/bg_conner_button"
+            android:text="Tài khoản" />
 
-            <Button
-                android:id="@+id/btnForgotPassword"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Quên mật khẩu" />
-            <Button
-                android:id="@+id/btnProfile_ChangePassword"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Đổi mật khẩu" />
-
-        </LinearLayout>
-        <LinearLayout
+        <Button
+            android:id="@+id/btnForgotPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:background="@drawable/bg_conner_button"
+            android:text="Quên mật khẩu" />
 
-            <Button
-                android:id="@+id/btnLogOut"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Đăng xuất" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnProfile_ChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:background="@drawable/bg_conner_button"
+            android:text="Đổi mật khẩu" />
+
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:background="@drawable/bg_conner_button"
+            android:text="Đăng xuất" />
     </LinearLayout>
 </LinearLayout>
