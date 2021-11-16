@@ -20,7 +20,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
+       android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="7"
@@ -31,6 +31,7 @@
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintUsername"
+            android:imeOptions="actionNext"
             android:minHeight="48dp" />
 
         <EditText
@@ -38,6 +39,7 @@
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintPassword"
+            android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
@@ -46,8 +48,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:text="@string/login" />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quên mật khẩu?"
+            android:gravity="center"
+            android:textColor="#C11919" />
     </LinearLayout>
 
 </LinearLayout>
