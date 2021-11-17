@@ -59,8 +59,37 @@ public class Login extends AppCompatActivity {
 
         user__ = auth.getCurrentUser();
         if (user__ != null) {
-            MainActivity.usernameApp = auth.getUid();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
+            mDatabase.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                    if (snapshot.getKey().equals(auth.getUid())){
+                        MainActivity.usernameApp = auth.getUid();
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    }
+                }
+
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
         }
     }
 
