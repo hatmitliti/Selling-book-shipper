@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="#FF5722"
     android:layout_height="match_parent"
+    android:background="#FF5722"
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,18 +15,18 @@
 
         <ImageView
             android:id="@+id/imgShipper"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/_100"
+            android:layout_height="@dimen/_100"
             android:src="@drawable/shipper_avatar" />
 
         <TextView
-            android:textStyle="bold"
             android:id="@+id/txtHoTenShipperInHoSo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shipper A"
+            android:text="@string/shipper_a"
             android:textColor="@color/black"
-            android:textSize="30dp" />
+            android:textSize="@dimen/_30"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,17 +43,17 @@
 
             <Button
                 android:id="@+id/btnEdit"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginRight="30dp"
-                android:text="Chỉnh sửa" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginRight="@dimen/_30"
+                android:text="@string/ch_nh_s_a" />
 
             <Button
                 android:id="@+id/btnAccount"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:text="Tài khoản" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
+                android:text="@string/t_i_kho_n" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,20 +64,22 @@
 
             <Button
                 android:id="@+id/btnForgotPassword"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Quên mật khẩu" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
+                android:layout_marginRight="@dimen/_30"
+                android:text="@string/qu_n_m_t_kh_u" />
+
             <Button
                 android:id="@+id/btnProfile_ChangePassword"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Đổi mật khẩu" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
+                android:layout_marginRight="@dimen/_30"
+                android:text="@string/i_m_t_kh_u" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,11 +88,11 @@
 
             <Button
                 android:id="@+id/btnLogOut"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Đăng xuất" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
+                android:layout_marginRight="@dimen/_30"
+                android:text="@string/ng_xu_t" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -11,11 +11,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/_5"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="@dimen/_250"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -23,56 +23,56 @@
                 android:id="@+id/tvTT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:text="Cần giao"
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/c_n_giao"
                 android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tvDC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:text="Địa chỉ"
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/a_ch"
                 android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tvTNN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:text="Tên người nhận"
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/t_n_ng_i_nh_n"
                 android:textColor="@color/black" />
 
             <TextView
                 android:textStyle="bold"
-                android:textSize="11dp"
+                android:textSize="@dimen/_11"
                 android:id="@+id/tvMDH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:text="Mã đơn hàng"
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/m_n_h_ng"
                 android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="150dp"
+            android:layout_width="@dimen/_150"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnDaNhanHangCanGiao"
-                android:layout_width="105dp"
+                android:layout_width="@dimen/_105"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_completed"
-                android:text="Đã nhận" />
+                android:text="@string/nh_n" />
 
             <Button
                 android:id="@+id/btnHuyHangCanGiao"
-                android:layout_width="105dp"
+                android:layout_width="@dimen/_105"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_cancel"
-                android:text="Hủy" />
+                android:text="@string/h_y" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -9,11 +9,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FF5722"
+        android:background="@color/cam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Khách hủy" />
+        app:title="@string/khachhuy" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,12 +32,12 @@
             android:id="@+id/btnHDH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng muốn hủy đơn hàng" />
+            android:text="@string/kh_ch_h_ng_mu_n_h_y_n_h_ng" />
 
         <Button
             android:id="@+id/btnTDH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng đặt trùng đơn hàng" />
+            android:text="@string/kh_ch_h_ng_t_tr_ng_n_h_ng" />
     </LinearLayout>
 </LinearLayout>

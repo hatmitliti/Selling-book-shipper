@@ -15,7 +15,7 @@
         <ViewFlipper
             android:id="@+id/viewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="@dimen/_200" />
     </LinearLayout>
 
     <LinearLayout
@@ -27,45 +27,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnCanGiao"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginRight="30dp"
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginRight="@dimen/_30"
                 android:text="Cần giao" />
 
             <Button
                 android:id="@+id/btnDangGiao"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
                 android:text="Đang giao" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/_15"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnDaGiao"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginRight="30dp"
-                android:text="Đã giao" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginRight="@dimen/_30"
+                android:text="@string/giao" />
 
             <Button
                 android:id="@+id/btnDaHuy"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="30dp"
-                android:text="Đã hủy" />
+                android:layout_width="@dimen/_120"
+                android:layout_height="@dimen/_120"
+                android:layout_marginLeft="@dimen/_30"
+                android:text="@string/h_y_" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

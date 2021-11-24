@@ -63,7 +63,8 @@ public class Profile extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(), Login.class));
+                getActivity().finish();
+                //startActivity(new Intent(getActivity(), Login.class));
             }
         });
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {

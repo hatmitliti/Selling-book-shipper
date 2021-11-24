@@ -11,26 +11,26 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FF5722"
+        android:background="@color/cam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Quản lý tài khoản" />
+        app:title="@string/quan_ly_tai_khoan" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:text="Họ và tên:"
+            android:text="@string/h_v_t_n"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
@@ -39,26 +39,24 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center|left"
-
-            android:text="Shipper A"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
+            android:text="@string/s_i_n_tho_i"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:text="Số điện thoại:"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
@@ -67,25 +65,24 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center|left"
-            android:text="0123456789"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:text="Ngày sinh:"
+            android:text="@string/ng_y_sinh"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
@@ -94,25 +91,24 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center|left"
-            android:text="1/1/2000"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:text="ID: "
+            android:text="@string/id"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
@@ -121,52 +117,52 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center|left"
-            android:text="1/1/2000"
+            android:text="@string/_1_1_2000"
             android:textColor="@color/black"
-            android:textSize="10dp" />
+            android:textSize="@dimen/_10" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_25"
             android:layout_weight="6"
-            android:text="Email: "
+            android:text="@string/email"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtemail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/_25"
             android:layout_weight="4"
             android:gravity="center|left"
-            android:text="1/1/2000"
+            android:text="@string/_1_1_2000"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_50"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="6"
-            android:text="Lương CB: "
+            android:text="@string/l_ng_cb"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/_16"
             android:textStyle="bold" />
 
         <TextView
@@ -175,9 +171,9 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center|left"
-            android:text="1/1/2000"
+            android:text="@string/_1_1_2000"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
 </LinearLayout>

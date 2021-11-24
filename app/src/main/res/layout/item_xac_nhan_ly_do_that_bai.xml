@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardElevation="2dp"
-    card_view:cardCornerRadius="2dp"
-    card_view:cardUseCompatPadding="true"
-    >
+    card_view:cardCornerRadius="@dimen/_2"
+    card_view:cardElevation="@dimen/_2"
+    card_view:cardUseCompatPadding="true">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="5dp">
+        android:layout_margin="@dimen/_5"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvMDH"
-            android:layout_marginBottom="2dp"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã đơn hàng"/>
+            android:layout_marginBottom="2dp"
+            android:text="@string/m_n_h_ng"
+            android:textColor="@color/black" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/tvLyDo"
-                android:layout_marginBottom="2dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lý do thất bại"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/l_do_th_t_b_i"
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>

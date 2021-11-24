@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FF5722"
+        android:background="@color/cam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Lý do thay đổi thông tin" />
+        app:title="@string/thay_doi_thong_tin" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
         android:layout_weight="3"
-        />
+        android:gravity="center"
+        android:orientation="vertical" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="7"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnTTNG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng yêu cầu thay đổi ngày/giờ"
-            />
+            android:text="@string/kh_ch_h_ng_y_u_c_u_thay_i_ng_y_gi" />
+
         <Button
             android:id="@+id/btnTTDD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng yêu cầu thay đổi địa điểm giao hàng"/>
+            android:text="@string/kh_ch_h_ng_y_u_c_u_thay_i_a_i_m_giao_h_ng" />
     </LinearLayout>
 </LinearLayout>
