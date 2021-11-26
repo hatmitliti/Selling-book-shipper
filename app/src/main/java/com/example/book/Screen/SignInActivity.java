@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,11 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.book.Dialog.NotificationDialog;
 import com.example.book.MainActivity;
-import com.example.book.Object.Shipper;
 import com.example.book.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -44,9 +40,9 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dang_nhap);
         notificationDialog = new NotificationDialog(this);
-        mUser = FirebaseAuth.getInstance().getCurrentUser();
-        setControl();
         auth = FirebaseAuth.getInstance();
+        mUser = auth.getCurrentUser();
+        setControl();
         setEvent();
     }
 
@@ -73,8 +69,8 @@ public class SignInActivity extends AppCompatActivity {
                                 mDatabase.child("shipper").addChildEventListener(new ChildEventListener() {
                                     @Override
                                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                                        if (snapshot.getKey().equals(mUser.getUid())) {
-                                            MainActivity.usernameApp = mUser.getUid();
+                                        if (snapshot.getKey().equals(auth.getUid())) {
+                                            MainActivity.usernameApp = auth.getUid();
                                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                         }
                                     }
@@ -113,7 +109,7 @@ public class SignInActivity extends AppCompatActivity {
         txtQuenMK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ForgetPass.class));
+                startActivity(new Intent(getApplicationContext(), ForgetPasswordActivity.class));
             }
         });
     }

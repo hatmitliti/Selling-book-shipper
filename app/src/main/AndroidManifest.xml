@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Screen.ForgetPass"
+            android:name=".Screen.ForgetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".Screen.ChangePasswordActivity"

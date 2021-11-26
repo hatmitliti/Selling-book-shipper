@@ -10,18 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.book.Dialog.NotificationDialog;
 import com.example.book.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ForgetPass extends AppCompatActivity {
+public class ForgetPasswordActivity extends AppCompatActivity {
+    private NotificationDialog notificationDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pass);
+        notificationDialog = new NotificationDialog(this);
 
         EditText txtmailFogotPass = findViewById(R.id.txtmailFogotPass);
         Button btnGuiMail = findViewById(R.id.btnGuiMail);
@@ -32,17 +35,19 @@ public class ForgetPass extends AppCompatActivity {
 
                 String mail = txtmailFogotPass.getText().toString().trim();
                 if (mail.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Yêu càu nhập thông tin", Toast.LENGTH_SHORT).show();
+                    txtmailFogotPass.setError(getResources().getString(R.string.field_empty));
                 } else {
+                    notificationDialog.startLoadingDialog();
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.sendPasswordResetEmail(mail).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(), "Gửi email đổi mật khẩu thành công. Vui lòng kiểm tra email!", Toast.LENGTH_SHORT).show();
-                                onBackPressed();
+                                notificationDialog.endLoadingDialog();
+                                notificationDialog.startSuccessfulDialog(getResources().getString(R.string.send_email_reset_success));
                             } else {
-                                Toast.makeText(getApplicationContext(), "Gửi email đổi mật khẩu thất bại!", Toast.LENGTH_SHORT).show();
+                                notificationDialog.endLoadingDialog();
+                                notificationDialog.startSuccessfulDialog(getResources().getString(R.string.send_email_reset_failed));
                             }
                         }
                     });

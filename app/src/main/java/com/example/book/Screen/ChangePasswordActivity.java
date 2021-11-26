@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.book.Dialog.NotificationDialog;
 import com.example.book.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,20 +25,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
     Button btnChangPassword;
     FirebaseUser user;
     FirebaseAuth auth;
+    private NotificationDialog notificationDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
-
+        notificationDialog = new NotificationDialog(this);
         mapping();
         //init firebase
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
         setEvent();
-
-
         // toolbarr
         Toolbar toolbar = findViewById(R.id.tbChangePassword);
         setSupportActionBar(toolbar);
@@ -70,17 +70,20 @@ public class ChangePasswordActivity extends AppCompatActivity {
         String password = edtCurrentPassword.getText().toString().trim();
 
         if (password.isEmpty()) {
-            edtCurrentPassword.setError("Trường mật khẩu trống!");
+            edtCurrentPassword.setError(getResources().getString(R.string.field_empty));
         } else {
+            notificationDialog.startLoadingDialog();
             AuthCredential credential = EmailAuthProvider
                     .getCredential(email, password);
             user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
+                        notificationDialog.endLoadingDialog();
                         changePassword();
                     } else {
-                        Toast.makeText(getApplicationContext(), "Mật khẩu hiện tại không đúng!", Toast.LENGTH_SHORT).show();
+                        notificationDialog.endLoadingDialog();
+                        notificationDialog.startErrorDialog(getResources().getString(R.string.pass_failed));
                     }
                 }
             });
@@ -92,19 +95,22 @@ public class ChangePasswordActivity extends AppCompatActivity {
         String password = edtNewPassword.getText().toString().trim();
         String repassword = edtRePassword.getText().toString().trim();
         if (password.isEmpty()) {
-            edtNewPassword.setError("Trường mật khẩu trống!");
+            edtNewPassword.setError(getResources().getString(R.string.field_empty));
         } else if (repassword.isEmpty()) {
-            edtRePassword.setError("Trường nhập lại mật khẩu trống!");
+            edtRePassword.setError(getResources().getString(R.string.field_empty));
         } else if (!repassword.equalsIgnoreCase(password)) {
-            edtRePassword.setError("Nhập lại mật khẩu không khớp!");
+            edtRePassword.setError(getResources().getString(R.string.re_pass_failed));
         } else {
+            notificationDialog.startLoadingDialog();
             user.updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), "Đổi mật khẩu thành công!", Toast.LENGTH_SHORT).show();
+                        notificationDialog.endLoadingDialog();
+                        notificationDialog.startSuccessfulDialog(getResources().getString(R.string.change_password_success));
                     } else {
-                        Toast.makeText(getApplicationContext(), "Đổi mật khẩu không thành công!", Toast.LENGTH_SHORT).show();
+                        notificationDialog.endLoadingDialog();
+                        notificationDialog.startSuccessfulDialog(getResources().getString(R.string.change_password_failed));
                     }
                 }
             });
