@@ -1,15 +1,9 @@
 package com.example.book.Screen;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.book.Dialog.NotificationDialog;
 import com.example.book.MainActivity;
 import com.example.book.Object.Shipper;
 import com.example.book.R;
@@ -35,62 +30,24 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.json.JSONObject;
-
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.Array;
-import java.util.Calendar;
-
-public class Login extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
     Button btnLogin;
     EditText txtUsernameLogin;
     EditText txtPasswordLogin;
     FirebaseAuth auth;
-    FirebaseUser user__;
     TextView txtQuenMK;
+    FirebaseUser mUser;
+    private NotificationDialog notificationDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dang_nhap);
+        notificationDialog = new NotificationDialog(this);
+        mUser = FirebaseAuth.getInstance().getCurrentUser();
         setControl();
         auth = FirebaseAuth.getInstance();
         setEvent();
-
-        user__ = auth.getCurrentUser();
-        if (user__ != null) {
-            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
-            mDatabase.addChildEventListener(new ChildEventListener() {
-                @Override
-                public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                    if (snapshot.getKey().equals(auth.getUid())){
-                        MainActivity.usernameApp = auth.getUid();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    }
-                }
-
-                @Override
-                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                }
-
-                @Override
-                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                }
-
-                @Override
-                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-
-        }
     }
 
     private void setEvent() {
@@ -102,21 +59,22 @@ public class Login extends AppCompatActivity {
                 String password = txtPasswordLogin.getText().toString();
 
                 if (username.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Vui lòng nhập tài khoản!", Toast.LENGTH_SHORT).show();
+                    txtUsernameLogin.setError(getResources().getString(R.string.field_empty));
                 } else if (password.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Vui lòng nhập mật khẩu!", Toast.LENGTH_SHORT).show();
+                    txtPasswordLogin.setError(getResources().getString(R.string.field_empty));
                 } else {
-
+                    notificationDialog.startLoadingDialog();
                     auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                notificationDialog.endLoadingDialog();
                                 DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
                                 mDatabase.child("shipper").addChildEventListener(new ChildEventListener() {
                                     @Override
                                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                                        if (snapshot.getKey().equals(auth.getUid())) {
-                                            MainActivity.usernameApp = auth.getUid();
+                                        if (snapshot.getKey().equals(mUser.getUid())) {
+                                            MainActivity.usernameApp = mUser.getUid();
                                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                         }
                                     }
@@ -142,7 +100,8 @@ public class Login extends AppCompatActivity {
                                     }
                                 });
                             } else {
-                                Toast.makeText(getApplicationContext(), "Sai tài khoản hoặc mật khẩu!", Toast.LENGTH_SHORT).show();
+                                notificationDialog.endLoadingDialog();
+                                notificationDialog.startErrorDialog(getResources().getString(R.string.login_failed));
                             }
                         }
                     });

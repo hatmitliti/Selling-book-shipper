@@ -85,4 +85,7 @@
     <string name="h_y_">Đã hủy</string>
     <string name="ly_do_that_bai_xn">Xác nhận lý do thất bại</string>
     <string name="x_c_nh_n">Xác Nhận</string>
+    <string name="close">Đóng</string>
+    <string name="field_empty">Không được để trống trường này!</string>
+    <string name="login_failed">Sai tài khoản hoặc mật khẩu!</string>
 </resources>

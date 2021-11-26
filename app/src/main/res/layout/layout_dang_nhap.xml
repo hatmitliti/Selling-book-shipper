@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/nen"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -31,6 +30,7 @@
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintUsername"
+            android:imeOptions="actionNext"
             android:minHeight="@dimen/_48" />
 
         <EditText
@@ -39,6 +39,7 @@
             android:background="@drawable/border"
             android:hint="@string/hintPassword"
             android:inputType="textPassword"
+            android:imeOptions="actionDone"
             android:minHeight="@dimen/_48" />
 
         <Button
@@ -53,7 +54,7 @@
             android:id="@+id/txtQuenMK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="@string/qu_n_m_t_kh_u"
             android:textColor="@color/background_button_cancel"
