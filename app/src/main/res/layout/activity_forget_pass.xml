@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Screen.ForgetPass">
+    tools:context=".Screen.ForgetPasswordActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -28,13 +28,18 @@
             android:id="@+id/txtmailFogotPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nh_p_email" />
+            android:hint="@string/nh_p_email"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btnGuiMail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20"
+            android:layout_marginTop="@dimen/_40"
+            android:textSize="18sp"
+            android:background="@drawable/bg_conner_button"
             android:text="@string/g_i" />
     </LinearLayout>
 

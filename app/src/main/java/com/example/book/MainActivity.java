@@ -29,15 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout_main);
         setControl();
         setEvent();
-
       //  FirebaseDatabase database = FirebaseDatabase.getInstance();
        // DatabaseReference myRef = database.getReference("message");
        // myRef.setValue("Hello, World!");
-
-
-
-
-
     }
 
     private void setEvent() {

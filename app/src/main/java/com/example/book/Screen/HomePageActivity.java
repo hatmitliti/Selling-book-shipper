@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.book.R;
 
-public class Home extends Fragment {
+public class HomePageActivity extends Fragment {
     Button btnCanGiao, btnDangGiao, btnDaGiao, btnDaHuy;
     ViewFlipper viewFlipper;
 

@@ -38,7 +38,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_20"
+        android:layout_marginStart="@dimen/_20"
+        android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -46,21 +47,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtLyDoHuyDon1XacNhanHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtLyDoHuyDon2XacNhanHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -72,6 +73,8 @@
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:backgroundTint="@color/background_button_completed"
             android:text="@string/x_c_nh_n" />
     </LinearLayout>

@@ -3,6 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/drawable/bg_conner_button.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/drawable/bg_corner_dialog_error.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/drawable/bg_title_error_dialog.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/drawable/bg_title_successful_dialog.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/activity_change_password.xml" value="0.19692307692307692" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/activity_forget_pass.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/dialog_error.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/dialog_loading.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/dialog_successful.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_chi_tiet_don_hang.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_don_hang_can_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_don_hang_da_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_don_hang_da_huy.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_don_hang_dang_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/item_xac_nhan_ly_do_that_bai.xml" value="0.18" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_chi_tiet_don_hang.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_dang_nhap.xml" value="0.18" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_can_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_da_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_da_huy.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_don_hang_dang_giao.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_ho_so.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_khach_huy.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_khong_lien_lac_duoc.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_that_bai.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_ly_do_thay_doi_thong_tin.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_main.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_quan_ly_tai_khoan.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_sua_ho_so.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_trang_chu.xml" value="0.2" />
+        <entry key="..\:/Android Project with Team/Selling-book-shipper/app/src/main/res/layout/layout_xac_nhan_ly_do_that_bai.xml" value="0.2" />
         <entry key="..\:/Users/truon/OneDrive/Máy tính/Selling-book-shipper/app/src/main/res/layout/activity_change_password.xml" value="0.245018115942029" />
         <entry key="..\:/Users/truon/OneDrive/Máy tính/Selling-book-shipper/app/src/main/res/layout/activity_forget_pass.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/truon/OneDrive/Máy tính/Selling-book-shipper/app/src/main/res/layout/item_chi_tiet_don_hang.xml" value="0.24909420289855072" />

@@ -22,15 +22,12 @@ import java.util.ArrayList;
 
 public class Account extends AppCompatActivity {
   //  Toolbar toolbar;
-
-
     TextView txtHoVaTenQLTK;
     TextView txtSoDienThoaiQLTK;
     TextView txtNgaySinhQLTK;
     TextView txtid;
     TextView txtemail;
     TextView txtluongcb;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

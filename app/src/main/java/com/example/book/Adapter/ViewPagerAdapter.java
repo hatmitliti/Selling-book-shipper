@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.book.Screen.Home;
-import com.example.book.Screen.Profile;
+import com.example.book.Screen.HomePageActivity;
+import com.example.book.Screen.ProfileActivity;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -18,11 +18,11 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new Home();
+                return new HomePageActivity();
             case 1:
-                return new Profile();
+                return new ProfileActivity();
             default:
-                return new Home();
+                return new HomePageActivity();
         }
     }
 

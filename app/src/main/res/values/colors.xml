@@ -15,4 +15,5 @@
     <color name="red">#FF0000</color>
     <color name="nen">#B2DD7F</color>
     <color name="xanh">#3FA82D</color>
+    <color name="colorSuccess">#07cc65</color>
 </resources>

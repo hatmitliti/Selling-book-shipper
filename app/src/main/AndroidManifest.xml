@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Screen.ForgetPass"
+            android:name=".Screen.ForgetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".Screen.ChangePasswordActivity"
@@ -52,7 +52,15 @@
             android:name=".Screen.ScreenConfirm"
             android:exported="true" />
         <activity
-            android:name=".Screen.Login"
+            android:name=".Screen.SignInActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Screen.DetailOrder"
+            android:exported="true" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Screen.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,10 +68,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Screen.DetailOrder"
-            android:exported="true" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

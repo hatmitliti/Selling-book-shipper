@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Edit extends AppCompatActivity {
-  //  Toolbar toolbar;
+    //  Toolbar toolbar;
     Button btnLuuSuaHoSo;
     EditText txtHoVaTenSuaHoSo;
     EditText txtSoDienThoaiSuaHoSo;
@@ -51,19 +51,16 @@ public class Edit extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-
-
         // lưu thông tin vào firebase:
         btnLuuSuaHoSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (txtSoDienThoaiSuaHoSo.getText().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
+                    txtSoDienThoaiSuaHoSo.setError(getResources().getString(R.string.field_empty));
                 } else if (txtHoVaTenSuaHoSo.getText().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
-                }else if (txtngaysinhsuahoso.getText().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
+                    txtHoVaTenSuaHoSo.setError(getResources().getString(R.string.field_empty));
+                } else if (txtngaysinhsuahoso.getText().equals("")) {
+                    txtngaysinhsuahoso.setError(getResources().getString(R.string.field_empty));
                 } else {
                     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
                     mDatabase.child(MainActivity.usernameApp).child("name").setValue(txtHoVaTenSuaHoSo.getText().toString());
@@ -73,8 +70,6 @@ public class Edit extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     public void getNameShipper() {
@@ -93,7 +88,6 @@ public class Edit extends AppCompatActivity {
                         txtngaysinhsuahoso.setText(list.get(j).getBirth());
                     }
                 }
-
             }
 
             @Override
@@ -108,7 +102,6 @@ public class Edit extends AppCompatActivity {
                         txtngaysinhsuahoso.setText(list.get(j).getBirth());
                     }
                 }
-
             }
 
             @Override
@@ -129,7 +122,7 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setControl() {
-      //  toolbar = findViewById(R.id.tbEditProfile);
+        //  toolbar = findViewById(R.id.tbEditProfile);
         btnLuuSuaHoSo = findViewById(R.id.btnLuuSuaHoSo);
         txtHoVaTenSuaHoSo = findViewById(R.id.txtHoVaTenSuaHoSo);
         txtSoDienThoaiSuaHoSo = findViewById(R.id.txtSoDienThoaiSuaHoSo);

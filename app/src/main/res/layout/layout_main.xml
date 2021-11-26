@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFC107">
+    android:layout_height="match_parent">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
@@ -18,8 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/xanh"
+        app:itemIconSize="25sp"
         app:itemIconTint="@color/purple_700"
-        app:itemTextColor="@color/cam"
+        app:itemTextColor="@color/black"
         app:menu="@menu/menu_bottom" />
 </RelativeLayout>
