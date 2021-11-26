@@ -13,7 +13,7 @@ import com.example.book.R;
 
 public class Failure extends AppCompatActivity {
     TextView txtMaDHThatBai;
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnKLLD, btnTDTT, btnKH;
     Intent intent;
 
@@ -30,6 +30,8 @@ public class Failure extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -39,6 +41,7 @@ public class Failure extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
 
 
 
@@ -74,7 +77,7 @@ public class Failure extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+      //  toolbar = findViewById(R.id.tb);
         btnKH = findViewById(R.id.btnKH);
         btnKLLD = findViewById(R.id.btnKLLD);
         btnTDTT = findViewById(R.id.btnTDTT);

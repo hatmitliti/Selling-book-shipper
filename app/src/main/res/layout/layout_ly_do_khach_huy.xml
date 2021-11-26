@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="Khách hủy"
-        app:titleTextColor="@color/white"
-        android:background="@color/black"/>
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/khachhuy" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
         android:layout_weight="3"
-        />
+        android:gravity="center"
+        android:orientation="vertical" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="7"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnHDH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng muốn hủy đơn hàng"
-            />
+            android:text="@string/kh_ch_h_ng_mu_n_h_y_n_h_ng" />
+
         <Button
             android:id="@+id/btnTDH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hàng đặt trùng đơn hàng"/>
+            android:text="@string/kh_ch_h_ng_t_tr_ng_n_h_ng" />
     </LinearLayout>
 </LinearLayout>

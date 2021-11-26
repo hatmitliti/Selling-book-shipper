@@ -6,12 +6,14 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        app:title="Lý do thất bại"
-        app:titleTextColor="@color/white" />
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/ly_do_that_bai" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,18 +25,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã đơn hàng"
+            android:text="@string/m_n_h_ng"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="@dimen/_20"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtMaDHThatBai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="214W4364DS"
+            android:text="@string/_214w4364ds"
             android:textColor="@color/black"
-            android:textSize="30dp" />
+            android:textSize="@dimen/_30" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,18 +49,18 @@
             android:id="@+id/btnKLLD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Không liên lạc được" />
+            android:text="@string/kh_ng_li_n_l_c_c" />
 
         <Button
             android:id="@+id/btnTDTT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thay đổi thông tin" />
+            android:text="@string/thay_i_th_ng_tin" />
 
         <Button
             android:id="@+id/btnKH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khách hủy" />
+            android:text="@string/kh_ch_h_y" />
     </LinearLayout>
 </LinearLayout>

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 
 public class ScreenDelivered extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     MyRecyclerViewAdapterDelivered adapter;
     RecyclerView recyclerView;
     ArrayList<Bill> deliveredArrayList = new ArrayList<>();
@@ -38,15 +38,18 @@ public class ScreenDelivered extends AppCompatActivity {
         setContentView(R.layout.layout_don_hang_da_giao);
         setControl();
         setEvent();
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                onBackPressed();
             }
         });
+
     }
 
     private void setEvent() {
@@ -122,7 +125,7 @@ public class ScreenDelivered extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+      //  toolbar = findViewById(R.id.tb);
         recyclerView = findViewById(R.id.rv);
     }
 }

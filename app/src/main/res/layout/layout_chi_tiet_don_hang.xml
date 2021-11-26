@@ -8,124 +8,124 @@
     tools:context=".Screen.DetailOrder">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        app:title="Chi tiết đơn hàng"
-        app:titleTextColor="@color/white" />
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/chitiet" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/_10"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtNameChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Nguyễn Văn Tèo"
+            android:layout_marginBottom="@dimen/_10"
+            android:text="@string/nguy_n_v_n_t_o"
             android:textColor="@color/black"
-            android:textSize="18dp"
+            android:textSize="@dimen/_18"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtPhoneChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="0923272802"
+            android:layout_marginBottom="@dimen/_10"
+            android:text="@string/_0923272802"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/txtAddressChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="123,Trường Thọ,Thủ Đức,TP.HCM"
+            android:layout_marginBottom="@dimen/_40"
+            android:text="@string/_123_tr_ng_th_th_c_tp_hcm"
             android:textColor="@color/black" />
 
 
         <Button
-            android:layout_width="250dp"
+            android:layout_width="@dimen/_250"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/_10"
             android:backgroundTint="@color/black"
-            android:text="Điện thoại" />
+            android:text="@string/i_n_tho_i" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Giao hàng"
+            android:layout_marginBottom="@dimen/_10"
+            android:text="@string/giao_h_ng"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="@dimen/_20"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             android:layout_width="match_parent"
-            android:layout_height="225dp"
+            android:layout_height="@dimen/_225"
             android:background="@drawable/border_listview" />
 
         <TextView
             android:id="@+id/txtTongTienChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Tổng Tiền: 1100000 VND"
+            android:layout_marginTop="@dimen/_5"
+            android:text="@string/t_ng_ti_n_1100000_vnd"
             android:textColor="@color/black"
-            android:textSize="18dp"
+            android:textSize="@dimen/_18"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtTienGiamChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Tiền giảm: 1100000 VND"
+            android:layout_marginTop="@dimen/_5"
+            android:layout_marginBottom="@dimen/_5"
+            android:text="@string/ti_n_gi_m_1100000_vnd"
             android:textColor="@color/background_button_cancel"
-            android:textSize="18dp"
+            android:textSize="@dimen/_18"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtTienThuChiTietDonHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Tiền thu: 1100000 VND"
+            android:layout_marginTop="@dimen/_5"
+            android:layout_marginBottom="@dimen/_5"
+            android:text="@string/ti_n_thu_1100000_vnd"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="@dimen/_20"
             android:textStyle="bold" />
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom|center"
-
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnFail"
-                android:layout_width="190dp"
+                android:layout_width="@dimen/_190"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/background_button_cancel"
-                android:text="Thất bại" />
+                android:text="@string/th_t_b_i" />
 
             <Button
                 android:id="@+id/btnCompleted"
-                android:layout_width="190dp"
+                android:layout_width="@dimen/_190"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/background_button_completed"
-                android:text="Thành công" />
+                android:text="@string/th_nh_c_ng" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

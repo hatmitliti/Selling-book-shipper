@@ -8,81 +8,172 @@
     tools:context=".Screen.Account">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        app:title="Quản lý tài khoản"
-        app:titleTextColor="@color/white" />
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/quan_ly_tai_khoan" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Họ và tên:"
+            android:layout_weight="6"
+            android:text="@string/h_v_t_n"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtHoVaTenQLTK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Shipper A"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
 
         <TextView
+            android:text="@string/s_i_n_tho_i"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Số điện thoại:"
+            android:layout_weight="6"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtSoDienThoaiQLTK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="0123456789"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
 
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ngày sinh:"
+            android:layout_weight="6"
+            android:text="@string/ng_y_sinh"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtNgaySinhQLTK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="1/1/2000"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="@string/id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
+            android:text="@string/_1_1_2000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25"
+            android:layout_weight="6"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25"
+            android:layout_weight="4"
+            android:gravity="center|left"
+            android:text="@string/_1_1_2000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:text="@string/l_ng_cb"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtluongcb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
+            android:text="@string/_1_1_2000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16" />
     </LinearLayout>
 
 </LinearLayout>

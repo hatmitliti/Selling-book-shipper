@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Screen.ForgetPass">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -13,31 +15,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/khong_lien_lai_duoc" />
+        app:title="@string/quen_mk" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical" />
+        android:padding="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="7"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btnKCNN"
+        <EditText
+            android:id="@+id/txtmailFogotPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ng_a_ch_kh_ng_c_ng_i_nh_n" />
+            android:hint="@string/nh_p_email" />
 
         <Button
-            android:id="@+id/btnKCX"
-            android:layout_width="match_parent"
+            android:id="@+id/btnGuiMail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/a_ch_kh_ng_y_kh_ng_ch_nh_x_c_kh_ng_t_n_t_i" />
+            android:layout_marginTop="@dimen/_20"
+            android:text="@string/g_i" />
     </LinearLayout>
+
 </LinearLayout>

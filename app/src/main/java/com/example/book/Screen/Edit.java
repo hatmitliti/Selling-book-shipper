@@ -24,10 +24,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Edit extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnLuuSuaHoSo;
     EditText txtHoVaTenSuaHoSo;
     EditText txtSoDienThoaiSuaHoSo;
+    EditText txtngaysinhsuahoso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -50,6 +53,7 @@ public class Edit extends AppCompatActivity {
         });
 
 
+
         // lưu thông tin vào firebase:
         btnLuuSuaHoSo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,10 +62,13 @@ public class Edit extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
                 } else if (txtHoVaTenSuaHoSo.getText().equals("")) {
                     Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
+                }else if (txtngaysinhsuahoso.getText().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
                 } else {
                     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("shipper");
                     mDatabase.child(MainActivity.usernameApp).child("name").setValue(txtHoVaTenSuaHoSo.getText().toString());
-                    mDatabase.child(MainActivity.usernameApp).child("phone").setValue(txtSoDienThoaiSuaHoSo.getText().toString());
+                    mDatabase.child(MainActivity.usernameApp).child("sdt").setValue(txtSoDienThoaiSuaHoSo.getText().toString());
+                    mDatabase.child(MainActivity.usernameApp).child("birth").setValue(txtngaysinhsuahoso.getText().toString());
                     onBackPressed();
                 }
             }
@@ -82,7 +89,8 @@ public class Edit extends AppCompatActivity {
                 for (int j = 0; j < list.size(); j++) {
                     if (list.get(j).getId().equals(MainActivity.usernameApp)) {
                         txtHoVaTenSuaHoSo.setText(list.get(j).getName());
-                        txtSoDienThoaiSuaHoSo.setText(list.get(j).getPhone());
+                        txtSoDienThoaiSuaHoSo.setText(list.get(j).getSdt());
+                        txtngaysinhsuahoso.setText(list.get(j).getBirth());
                     }
                 }
 
@@ -96,7 +104,8 @@ public class Edit extends AppCompatActivity {
                 for (int j = 0; j < list.size(); j++) {
                     if (list.get(j).getId().equals(MainActivity.usernameApp)) {
                         txtHoVaTenSuaHoSo.setText(list.get(j).getName());
-                        txtSoDienThoaiSuaHoSo.setText(list.get(j).getPhone());
+                        txtSoDienThoaiSuaHoSo.setText(list.get(j).getSdt());
+                        txtngaysinhsuahoso.setText(list.get(j).getBirth());
                     }
                 }
 
@@ -120,9 +129,10 @@ public class Edit extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tbEditProfile);
+      //  toolbar = findViewById(R.id.tbEditProfile);
         btnLuuSuaHoSo = findViewById(R.id.btnLuuSuaHoSo);
         txtHoVaTenSuaHoSo = findViewById(R.id.txtHoVaTenSuaHoSo);
         txtSoDienThoaiSuaHoSo = findViewById(R.id.txtSoDienThoaiSuaHoSo);
+        txtngaysinhsuahoso = findViewById(R.id.txtngaysinhsuahoso);
     }
 }

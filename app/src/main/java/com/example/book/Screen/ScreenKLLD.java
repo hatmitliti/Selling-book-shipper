@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.book.R;
 
 public class ScreenKLLD extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnKCNN,btnKCX;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,15 +23,18 @@ public class ScreenKLLD extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               onBackPressed();
+                onBackPressed();
             }
         });
+
 
         btnKCNN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,7 @@ public class ScreenKLLD extends AppCompatActivity {
     }
 
     private void setConTrol() {
-        toolbar = findViewById(R.id.tb);
+     //   toolbar = findViewById(R.id.tb);
         btnKCNN = findViewById(R.id.btnKCNN);
         btnKCX = findViewById(R.id.btnKCX);
     }

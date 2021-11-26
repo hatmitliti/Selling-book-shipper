@@ -1,71 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardElevation="2dp"
     card_view:cardCornerRadius="2dp"
-    card_view:cardUseCompatPadding="true"
-    >
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
+        android:layout_margin="@dimen/_5"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="@dimen/_250"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvTT"
-                android:textColor="@color/black"
-                android:layout_marginBottom="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cần giao"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/c_n_giao"
+                android:textColor="@color/black" />
+
             <TextView
                 android:id="@+id/tvGT"
-                android:textColor="@color/black"
-                android:layout_marginBottom="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Giao tiền"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/giao_ti_n"
+                android:textColor="@color/black" />
+
             <TextView
                 android:id="@+id/tvDC"
-                android:layout_marginBottom="2dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Địa chỉ"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/a_ch"
+                android:textColor="@color/black" />
+
             <TextView
                 android:id="@+id/tvTNN"
-                android:layout_marginBottom="2dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên người nhận"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/t_n_ng_i_nh_n"
+                android:textColor="@color/black" />
+
             <TextView
-                android:textStyle="bold"
-                android:textSize="11dp"
                 android:id="@+id/tvMDH"
-                android:layout_marginBottom="2dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mã đơn hàng"/>
+                android:layout_marginBottom="@dimen/_2"
+                android:text="@string/m_n_h_ng"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="150dp"
+            android:layout_width="@dimen/_150"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/btnDaGiaoTienDaGiao"
-                android:layout_width="105dp"
+                android:layout_width="@dimen/_105"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/background_button_completed"
-                android:text="Đã giao tiền"/>
+                android:text="@string/da_giao_tien" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -9,26 +9,28 @@
     tools:context=".Screen.Failure">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        app:title="Xác nhận lý do thất bại"
-        app:titleTextColor="@color/white" />
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/ly_do_that_bai_xn" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/_10"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Thất bại"
+            android:text="@string/th_t_b_i"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="@dimen/_20"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -36,32 +38,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/_20"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtMaDonHangXacNhanHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="25252525"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="@dimen/_15" />
 
         <TextView
             android:id="@+id/txtLyDoHuyDon1XacNhanHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="không liên lạc được"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="@dimen/_15" />
 
         <TextView
             android:id="@+id/txtLyDoHuyDon2XacNhanHuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="đúng địa chỉ, không có nguoi nhan"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="@dimen/_15" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,6 +73,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/background_button_completed"
-            android:text="Xác Nhận" />
+            android:text="@string/x_c_nh_n" />
     </LinearLayout>
 </LinearLayout>

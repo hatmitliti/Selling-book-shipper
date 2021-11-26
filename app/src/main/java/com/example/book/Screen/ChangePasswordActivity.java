@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ChangePasswordActivity extends AppCompatActivity {
-    Toolbar toolbar;
+   // Toolbar toolbar;
     EditText edtCurrentPassword, edtNewPassword, edtRePassword;
     Button btnChangPassword;
     FirebaseUser user;
@@ -36,9 +36,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
 
         setEvent();
-    }
 
-    private void setEvent() {
+
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.tbChangePassword);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -48,6 +49,14 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+    }
+
+    private void setEvent() {
+      //  setSupportActionBar(toolbar);
+      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+
         btnChangPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,7 +112,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     }
 
     private void mapping() {
-        toolbar = findViewById(R.id.tbChangePassword);
+      //  toolbar = findViewById(R.id.tbChangePassword);
         edtCurrentPassword = findViewById(R.id.edt_current_password);
         edtNewPassword = findViewById(R.id.edt_change_password);
         edtRePassword = findViewById(R.id.edt_re_enter_password);

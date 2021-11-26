@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 
 public class ScreenConfirm extends AppCompatActivity {
-    Toolbar toolbar;
+ //   Toolbar toolbar;
     Button btnConfirm;
     TextView txtMaDonHangXacNhanHuy;
     TextView txtLyDoHuyDon1XacNhanHuy;
@@ -44,6 +44,8 @@ public class ScreenConfirm extends AppCompatActivity {
     }
 
     private void setTooBar() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -53,6 +55,7 @@ public class ScreenConfirm extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
     }
 
     private void setEvent() {
@@ -66,7 +69,7 @@ public class ScreenConfirm extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+      //  toolbar = findViewById(R.id.tb);
         btnConfirm = findViewById(R.id.btnConfirm);
         txtMaDonHangXacNhanHuy = findViewById(R.id.txtMaDonHangXacNhanHuy);
         txtLyDoHuyDon1XacNhanHuy = findViewById(R.id.txtLyDoHuyDon1XacNhanHuy);

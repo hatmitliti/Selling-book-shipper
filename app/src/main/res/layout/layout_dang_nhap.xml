@@ -3,26 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/nen"
     android:orientation="vertical"
-    android:background="#B2DD7F"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/_70"
         android:layout_weight="3">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="258dp"
+            android:layout_height="@dimen/_258"
             android:src="@drawable/background_login" />
 
     </LinearLayout>
 
     <LinearLayout
-       android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50"
         android:layout_weight="7"
         android:orientation="vertical">
 
@@ -31,32 +31,34 @@
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintUsername"
-            android:imeOptions="actionNext"
-            android:minHeight="48dp" />
+            android:minHeight="@dimen/_48" />
 
         <EditText
             android:id="@+id/txtPasswordLogin"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
             android:hint="@string/hintPassword"
-            android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="@dimen/_48" />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="@dimen/_20"
             android:text="@string/login" />
+
         <TextView
-            android:layout_marginTop="50dp"
+            android:id="@+id/txtQuenMK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quên mật khẩu?"
+            android:layout_marginTop="@dimen/_10"
             android:gravity="center"
-            android:textColor="#C11919" />
+            android:text="@string/qu_n_m_t_kh_u"
+            android:textColor="@color/background_button_cancel"
+            android:textStyle="bold" />
     </LinearLayout>
+
 
 </LinearLayout>

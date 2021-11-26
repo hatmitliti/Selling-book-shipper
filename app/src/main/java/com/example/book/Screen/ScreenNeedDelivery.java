@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class ScreenNeedDelivery extends AppCompatActivity {
-    Toolbar toolbar;
+ //   Toolbar toolbar;
     MyRecyclerViewAdapterNeedDelivery adapter;
     RecyclerView recyclerView;
     ArrayList<Bill> deliveryArrayList = new ArrayList<>();
@@ -118,19 +118,22 @@ public class ScreenNeedDelivery extends AppCompatActivity {
     }
 
     private void setControl() {
-        toolbar = findViewById(R.id.tb);
+       // toolbar = findViewById(R.id.tb);
         recyclerView = findViewById(R.id.rv);
     }
 
     private void Toolbar() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                onBackPressed();
             }
         });
+
     }
 }

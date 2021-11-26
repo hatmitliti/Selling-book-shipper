@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.book.R;
 
 public class ScreenTDTT extends AppCompatActivity {
-    Toolbar toolbar;
+  //  Toolbar toolbar;
     Button btnTTNG, btnTTDD;
 
     @Override
@@ -24,6 +24,8 @@ public class ScreenTDTT extends AppCompatActivity {
     }
 
     private void setEvent() {
+        // toolbarr
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -33,6 +35,7 @@ public class ScreenTDTT extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
         btnTTNG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +61,7 @@ public class ScreenTDTT extends AppCompatActivity {
     }
 
     private void setConTrol() {
-        toolbar = findViewById(R.id.tb);
+     //   toolbar = findViewById(R.id.tb);
         btnTTNG = findViewById(R.id.btnTTNG);
         btnTTDD = findViewById(R.id.btnTTDD);
     }

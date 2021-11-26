@@ -8,51 +8,65 @@
     tools:context=".Screen.Edit">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tbEditProfile"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/black" />
+        android:background="@color/cam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/sua_ho_so" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sửa hồ sơ"
-            android:textColor="@color/black"
-            android:textSize="30dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220"
+            android:scaleType="fitStart"
+            android:src="@drawable/shipper________________" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50"
         android:layout_weight="7"
         android:orientation="vertical">
+
 
         <EditText
             android:id="@+id/txtHoVaTenSuaHoSo"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
-            android:hint="Họ và tên" />
+            android:hint="@string/h_v_t_n"
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/txtSoDienThoaiSuaHoSo"
             style="@style/EdittextStyle"
             android:background="@drawable/border"
-            android:hint="Số điện thoại" />
+            android:hint="@string/s_i_n_tho_i"
+            android:inputType="number"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/txtngaysinhsuahoso"
+            style="@style/EdittextStyle"
+            android:background="@drawable/border"
+            android:hint="@string/ng_y_sinh"
+            android:inputType="date"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/btnLuuSuaHoSo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Lưu" />
+            android:layout_marginTop="@dimen/_100"
+            android:text="@string/l_u" />
     </LinearLayout>
 
 </LinearLayout>
