@@ -55,7 +55,7 @@
     <string name="shipper_a">Shipper A</string>
     <string name="ch_nh_s_a">Chỉnh sửa</string>
     <string name="t_i_kho_n">Tài khoản</string>
-    <string name="qu_n_m_t_kh_u">Quên mật khẩu</string>
+    <string name="qu_n_m_t_kh_u">Quên mật khẩu?</string>
     <string name="ng_xu_t">Đăng xuất</string>
     <string name="khachhuy">Khách hủy</string>
     <string name="kh_ch_h_ng_mu_n_h_y_n_h_ng">Khách hàng muốn hủy đơn hàng</string>

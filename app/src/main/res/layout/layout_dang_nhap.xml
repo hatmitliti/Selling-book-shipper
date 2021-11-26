@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20"
+            android:background="@drawable/bg_conner_button"
             android:text="@string/login" />
 
         <TextView

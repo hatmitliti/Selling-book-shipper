@@ -52,7 +52,7 @@
             android:name=".Screen.ScreenConfirm"
             android:exported="true" />
         <activity
-            android:name=".Screen.Login"
+            android:name=".Screen.SignInActivity"
             android:exported="true">
 
         </activity>
