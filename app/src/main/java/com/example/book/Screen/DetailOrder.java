@@ -2,6 +2,7 @@ package com.example.book.Screen;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -125,11 +126,18 @@ public class DetailOrder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseConnect.setcancelingOrders(idBill);
-                Intent intent = new Intent(getApplicationContext(),Failure.class);
-                intent.putExtra("idBill",idBill);
+                onBackPressed();
+            }
+        });
+
+        findViewById(R.id.btnPhone).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+ phoneBill));
                 startActivity(intent);
             }
         });
+
     }
 
     public void getDataInDatabase() {
